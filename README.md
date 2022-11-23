@@ -4,7 +4,7 @@ Voici notre application développée pour le bloc "Programmation orientée objet
 
 Notre équipe de projet:
   - Paul-Marie Corbet
-  - 
+  - Nicolas Coulon
   - 
 
 Configuration requise:
