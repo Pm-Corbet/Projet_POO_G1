@@ -50,8 +50,9 @@ namespace ProjetPOOG1 {
 	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::Button^ addClient;
 
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Nom;
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox9;
 	private: System::Windows::Forms::TextBox^ textBox8;
 	private: System::Windows::Forms::TextBox^ textBox7;
@@ -65,7 +66,8 @@ namespace ProjetPOOG1 {
 
 	private: System::Windows::Forms::Button^ deleteClient;
 
-	private: System::Windows::Forms::Button^ printClient;
+
+
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label5;
@@ -85,8 +87,9 @@ namespace ProjetPOOG1 {
 	private: System::Windows::Forms::Button^ button10;
 	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::Button^ printTop10;
+	private: System::Windows::Forms::DataGridView^ dataGridStats;
 
-	private: System::Windows::Forms::DataGridView^ dataGridView2;
+
 
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
@@ -97,16 +100,21 @@ namespace ProjetPOOG1 {
 	private: System::Windows::Forms::ComboBox^ comboBox4;
 	private: System::Windows::Forms::ComboBox^ comboBox3;
 	private: System::Windows::Forms::ComboBox^ comboBox2;
-	private: System::Windows::Forms::Button^ printStaff;
+	private: System::Windows::Forms::Button^ findStaff;
+
 
 	private: System::Windows::Forms::Button^ deleteStaff;
 
 	private: System::Windows::Forms::Button^ updateStaff;
 
 	private: System::Windows::Forms::Button^ addStaff;
+	private: System::Windows::Forms::DataGridView^ dataGridStaff;
+	private: System::Windows::Forms::Button^ findStock;
 
-	private: System::Windows::Forms::DataGridView^ dataGridView3;
-	private: System::Windows::Forms::Button^ printStock;
+
+
+
+
 
 
 	private: System::Windows::Forms::Button^ deleteStock;
@@ -114,10 +122,11 @@ namespace ProjetPOOG1 {
 
 	private: System::Windows::Forms::Button^ updateStock;
 	private: System::Windows::Forms::Button^ addStock;
+	private: System::Windows::Forms::DataGridView^ dataGridStock;
 
 
 
-	private: System::Windows::Forms::DataGridView^ dataGridView4;
+
 private: System::Windows::Forms::Button^ printOrder;
 
 private: System::Windows::Forms::Button^ deleteOrder;
@@ -125,8 +134,9 @@ private: System::Windows::Forms::Button^ deleteOrder;
 private: System::Windows::Forms::Button^ updateOrder;
 
 private: System::Windows::Forms::Button^ addOrder;
+private: System::Windows::Forms::DataGridView^ dataGridOrder;
 
-	private: System::Windows::Forms::DataGridView^ dataGridView5;
+
 	private: System::Windows::Forms::TextBox^ textBox23;
 	private: System::Windows::Forms::TextBox^ textBox22;
 	private: System::Windows::Forms::TextBox^ textBox21;
@@ -151,6 +161,16 @@ private: System::Windows::Forms::Button^ deleteItemOrder;
 private: System::Windows::Forms::Button^ addItemOrder;
 
 private: System::Windows::Forms::TextBox^ textBox35;
+private: System::Windows::Forms::DataGridView^ dataGridClient;
+private: System::Windows::Forms::Button^ printStock;
+private: System::Windows::Forms::Button^ finClient;
+
+
+
+private: System::Windows::Forms::Button^ printStaff;
+private: System::Windows::Forms::Button^ printClient;
+
+
 
 
 
@@ -173,15 +193,16 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->Tabcontrol = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox27 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox26 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox25 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox24 = (gcnew System::Windows::Forms::TextBox());
-			this->printStock = (gcnew System::Windows::Forms::Button());
+			this->findStock = (gcnew System::Windows::Forms::Button());
 			this->deleteStock = (gcnew System::Windows::Forms::Button());
 			this->updateStock = (gcnew System::Windows::Forms::Button());
 			this->addStock = (gcnew System::Windows::Forms::Button());
-			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridStock = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->printClient = (gcnew System::Windows::Forms::Button());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
@@ -196,8 +217,7 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->updateClient = (gcnew System::Windows::Forms::Button());
 			this->deleteClient = (gcnew System::Windows::Forms::Button());
 			this->addClient = (gcnew System::Windows::Forms::Button());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->Nom = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridClient = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->textBox23 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox22 = (gcnew System::Windows::Forms::TextBox());
@@ -208,11 +228,11 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->textBox17 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
-			this->printStaff = (gcnew System::Windows::Forms::Button());
+			this->findStaff = (gcnew System::Windows::Forms::Button());
 			this->deleteStaff = (gcnew System::Windows::Forms::Button());
 			this->updateStaff = (gcnew System::Windows::Forms::Button());
 			this->addStaff = (gcnew System::Windows::Forms::Button());
-			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridStaff = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->textBox34 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox33 = (gcnew System::Windows::Forms::TextBox());
@@ -227,7 +247,7 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->deleteOrder = (gcnew System::Windows::Forms::Button());
 			this->updateOrder = (gcnew System::Windows::Forms::Button());
 			this->addOrder = (gcnew System::Windows::Forms::Button());
-			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridOrder = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
@@ -241,7 +261,7 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->printTop10 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridStats = (gcnew System::Windows::Forms::DataGridView());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
@@ -257,18 +277,20 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
+			this->printStock = (gcnew System::Windows::Forms::Button());
+			this->finClient = (gcnew System::Windows::Forms::Button());
+			this->printStaff = (gcnew System::Windows::Forms::Button());
 			this->Tabcontrol->SuspendLayout();
 			this->tabPage3->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStock))->BeginInit();
 			this->tabPage1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridClient))->BeginInit();
 			this->tabPage2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStaff))->BeginInit();
 			this->tabPage4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridOrder))->BeginInit();
 			this->tabPage5->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStats))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// Tabcontrol
@@ -287,16 +309,17 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			// 
 			// tabPage3
 			// 
+			this->tabPage3->Controls->Add(this->printStock);
 			this->tabPage3->Controls->Add(this->textBox35);
 			this->tabPage3->Controls->Add(this->textBox27);
 			this->tabPage3->Controls->Add(this->textBox26);
 			this->tabPage3->Controls->Add(this->textBox25);
 			this->tabPage3->Controls->Add(this->textBox24);
-			this->tabPage3->Controls->Add(this->printStock);
+			this->tabPage3->Controls->Add(this->findStock);
 			this->tabPage3->Controls->Add(this->deleteStock);
 			this->tabPage3->Controls->Add(this->updateStock);
 			this->tabPage3->Controls->Add(this->addStock);
-			this->tabPage3->Controls->Add(this->dataGridView4);
+			this->tabPage3->Controls->Add(this->dataGridStock);
 			this->tabPage3->Location = System::Drawing::Point(4, 22);
 			this->tabPage3->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage3->Name = L"tabPage3";
@@ -305,6 +328,16 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Stock";
 			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// textBox35
+			// 
+			this->textBox35->Location = System::Drawing::Point(19, 343);
+			this->textBox35->Margin = System::Windows::Forms::Padding(2);
+			this->textBox35->Name = L"textBox35";
+			this->textBox35->Size = System::Drawing::Size(352, 20);
+			this->textBox35->TabIndex = 9;
+			this->textBox35->Text = L"Taux de TVA";
+			this->textBox35->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox35_TextChanged);
 			// 
 			// textBox27
 			// 
@@ -343,16 +376,16 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->textBox24->TabIndex = 5;
 			this->textBox24->Text = L"Nom";
 			// 
-			// printStock
+			// findStock
 			// 
-			this->printStock->Location = System::Drawing::Point(211, 93);
-			this->printStock->Margin = System::Windows::Forms::Padding(2);
-			this->printStock->Name = L"printStock";
-			this->printStock->Size = System::Drawing::Size(159, 74);
-			this->printStock->TabIndex = 4;
-			this->printStock->Text = L"Afficher";
-			this->printStock->UseVisualStyleBackColor = true;
-			this->printStock->Click += gcnew System::EventHandler(this, &MyForm::button19_Click);
+			this->findStock->Location = System::Drawing::Point(211, 93);
+			this->findStock->Margin = System::Windows::Forms::Padding(2);
+			this->findStock->Name = L"findStock";
+			this->findStock->Size = System::Drawing::Size(159, 74);
+			this->findStock->TabIndex = 4;
+			this->findStock->Text = L"Rechercher";
+			this->findStock->UseVisualStyleBackColor = true;
+			this->findStock->Click += gcnew System::EventHandler(this, &MyForm::button19_Click);
 			// 
 			// deleteStock
 			// 
@@ -384,19 +417,21 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->addStock->Text = L"Ajouter stock";
 			this->addStock->UseVisualStyleBackColor = true;
 			// 
-			// dataGridView4
+			// dataGridStock
 			// 
-			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView4->Location = System::Drawing::Point(388, 5);
-			this->dataGridView4->Margin = System::Windows::Forms::Padding(2);
-			this->dataGridView4->Name = L"dataGridView4";
-			this->dataGridView4->RowHeadersWidth = 51;
-			this->dataGridView4->RowTemplate->Height = 24;
-			this->dataGridView4->Size = System::Drawing::Size(436, 484);
-			this->dataGridView4->TabIndex = 0;
+			this->dataGridStock->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridStock->Location = System::Drawing::Point(388, 5);
+			this->dataGridStock->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridStock->Name = L"dataGridStock";
+			this->dataGridStock->RowHeadersWidth = 51;
+			this->dataGridStock->RowTemplate->Height = 24;
+			this->dataGridStock->Size = System::Drawing::Size(436, 484);
+			this->dataGridStock->TabIndex = 0;
+			this->dataGridStock->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridStock_CellContentClick);
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->finClient);
 			this->tabPage1->Controls->Add(this->printClient);
 			this->tabPage1->Controls->Add(this->textBox9);
 			this->tabPage1->Controls->Add(this->textBox8);
@@ -410,7 +445,7 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->tabPage1->Controls->Add(this->updateClient);
 			this->tabPage1->Controls->Add(this->deleteClient);
 			this->tabPage1->Controls->Add(this->addClient);
-			this->tabPage1->Controls->Add(this->dataGridView1);
+			this->tabPage1->Controls->Add(this->dataGridClient);
 			this->tabPage1->Location = System::Drawing::Point(4, 22);
 			this->tabPage1->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage1->Name = L"tabPage1";
@@ -423,12 +458,12 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			// 
 			// printClient
 			// 
-			this->printClient->Location = System::Drawing::Point(211, 93);
+			this->printClient->Location = System::Drawing::Point(19, 174);
 			this->printClient->Margin = System::Windows::Forms::Padding(2);
 			this->printClient->Name = L"printClient";
-			this->printClient->Size = System::Drawing::Size(159, 74);
+			this->printClient->Size = System::Drawing::Size(351, 33);
 			this->printClient->TabIndex = 13;
-			this->printClient->Text = L"Afficher";
+			this->printClient->Text = L"Afficher tout";
 			this->printClient->UseVisualStyleBackColor = true;
 			this->printClient->Click += gcnew System::EventHandler(this, &MyForm::printClient_Click);
 			// 
@@ -546,28 +581,21 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->addClient->UseVisualStyleBackColor = true;
 			this->addClient->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
-			// dataGridView1
+			// dataGridClient
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Nom });
-			this->dataGridView1->Location = System::Drawing::Point(388, 5);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(436, 484);
-			this->dataGridView1->TabIndex = 0;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
-			// 
-			// Nom
-			// 
-			this->Nom->HeaderText = L"Column1";
-			this->Nom->MinimumWidth = 6;
-			this->Nom->Name = L"Nom";
-			this->Nom->Width = 125;
+			this->dataGridClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridClient->Location = System::Drawing::Point(388, 5);
+			this->dataGridClient->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridClient->Name = L"dataGridClient";
+			this->dataGridClient->RowHeadersWidth = 51;
+			this->dataGridClient->RowTemplate->Height = 24;
+			this->dataGridClient->Size = System::Drawing::Size(436, 484);
+			this->dataGridClient->TabIndex = 0;
+			this->dataGridClient->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->printStaff);
 			this->tabPage2->Controls->Add(this->textBox23);
 			this->tabPage2->Controls->Add(this->textBox22);
 			this->tabPage2->Controls->Add(this->textBox21);
@@ -577,11 +605,11 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->tabPage2->Controls->Add(this->textBox17);
 			this->tabPage2->Controls->Add(this->textBox16);
 			this->tabPage2->Controls->Add(this->textBox15);
-			this->tabPage2->Controls->Add(this->printStaff);
+			this->tabPage2->Controls->Add(this->findStaff);
 			this->tabPage2->Controls->Add(this->deleteStaff);
 			this->tabPage2->Controls->Add(this->updateStaff);
 			this->tabPage2->Controls->Add(this->addStaff);
-			this->tabPage2->Controls->Add(this->dataGridView3);
+			this->tabPage2->Controls->Add(this->dataGridStaff);
 			this->tabPage2->Location = System::Drawing::Point(4, 22);
 			this->tabPage2->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage2->Name = L"tabPage2";
@@ -672,15 +700,16 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->textBox15->TabIndex = 5;
 			this->textBox15->Text = L"Nom";
 			// 
-			// printStaff
+			// findStaff
 			// 
-			this->printStaff->Location = System::Drawing::Point(211, 93);
-			this->printStaff->Margin = System::Windows::Forms::Padding(2);
-			this->printStaff->Name = L"printStaff";
-			this->printStaff->Size = System::Drawing::Size(159, 74);
-			this->printStaff->TabIndex = 4;
-			this->printStaff->Text = L"Afficher";
-			this->printStaff->UseVisualStyleBackColor = true;
+			this->findStaff->Location = System::Drawing::Point(211, 93);
+			this->findStaff->Margin = System::Windows::Forms::Padding(2);
+			this->findStaff->Name = L"findStaff";
+			this->findStaff->Size = System::Drawing::Size(159, 74);
+			this->findStaff->TabIndex = 4;
+			this->findStaff->Text = L"Rechercher";
+			this->findStaff->UseVisualStyleBackColor = true;
+			this->findStaff->Click += gcnew System::EventHandler(this, &MyForm::printStaff_Click);
 			// 
 			// deleteStaff
 			// 
@@ -712,16 +741,16 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->addStaff->Text = L"Ajouter personnel";
 			this->addStaff->UseVisualStyleBackColor = true;
 			// 
-			// dataGridView3
+			// dataGridStaff
 			// 
-			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView3->Location = System::Drawing::Point(388, 5);
-			this->dataGridView3->Margin = System::Windows::Forms::Padding(2);
-			this->dataGridView3->Name = L"dataGridView3";
-			this->dataGridView3->RowHeadersWidth = 51;
-			this->dataGridView3->RowTemplate->Height = 24;
-			this->dataGridView3->Size = System::Drawing::Size(436, 484);
-			this->dataGridView3->TabIndex = 0;
+			this->dataGridStaff->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridStaff->Location = System::Drawing::Point(388, 5);
+			this->dataGridStaff->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridStaff->Name = L"dataGridStaff";
+			this->dataGridStaff->RowHeadersWidth = 51;
+			this->dataGridStaff->RowTemplate->Height = 24;
+			this->dataGridStaff->Size = System::Drawing::Size(436, 484);
+			this->dataGridStaff->TabIndex = 0;
 			// 
 			// tabPage4
 			// 
@@ -738,7 +767,7 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->tabPage4->Controls->Add(this->deleteOrder);
 			this->tabPage4->Controls->Add(this->updateOrder);
 			this->tabPage4->Controls->Add(this->addOrder);
-			this->tabPage4->Controls->Add(this->dataGridView5);
+			this->tabPage4->Controls->Add(this->dataGridOrder);
 			this->tabPage4->Location = System::Drawing::Point(4, 22);
 			this->tabPage4->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage4->Name = L"tabPage4";
@@ -872,16 +901,16 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->addOrder->Text = L"Ajouter commande";
 			this->addOrder->UseVisualStyleBackColor = true;
 			// 
-			// dataGridView5
+			// dataGridOrder
 			// 
-			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView5->Location = System::Drawing::Point(388, 5);
-			this->dataGridView5->Margin = System::Windows::Forms::Padding(2);
-			this->dataGridView5->Name = L"dataGridView5";
-			this->dataGridView5->RowHeadersWidth = 51;
-			this->dataGridView5->RowTemplate->Height = 24;
-			this->dataGridView5->Size = System::Drawing::Size(436, 484);
-			this->dataGridView5->TabIndex = 0;
+			this->dataGridOrder->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridOrder->Location = System::Drawing::Point(388, 5);
+			this->dataGridOrder->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridOrder->Name = L"dataGridOrder";
+			this->dataGridOrder->RowHeadersWidth = 51;
+			this->dataGridOrder->RowTemplate->Height = 24;
+			this->dataGridOrder->Size = System::Drawing::Size(436, 484);
+			this->dataGridOrder->TabIndex = 0;
 			// 
 			// tabPage5
 			// 
@@ -897,7 +926,7 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->tabPage5->Controls->Add(this->button10);
 			this->tabPage5->Controls->Add(this->button9);
 			this->tabPage5->Controls->Add(this->printTop10);
-			this->tabPage5->Controls->Add(this->dataGridView2);
+			this->tabPage5->Controls->Add(this->dataGridStats);
 			this->tabPage5->Controls->Add(this->button7);
 			this->tabPage5->Controls->Add(this->button6);
 			this->tabPage5->Controls->Add(this->textBox13);
@@ -1054,16 +1083,16 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->printTop10->Text = L"Afficher top 10";
 			this->printTop10->UseVisualStyleBackColor = true;
 			// 
-			// dataGridView2
+			// dataGridStats
 			// 
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(461, 5);
-			this->dataGridView2->Margin = System::Windows::Forms::Padding(2);
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->RowHeadersWidth = 51;
-			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(362, 484);
-			this->dataGridView2->TabIndex = 15;
+			this->dataGridStats->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridStats->Location = System::Drawing::Point(461, 5);
+			this->dataGridStats->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridStats->Name = L"dataGridStats";
+			this->dataGridStats->RowHeadersWidth = 51;
+			this->dataGridStats->RowTemplate->Height = 24;
+			this->dataGridStats->Size = System::Drawing::Size(362, 484);
+			this->dataGridStats->TabIndex = 15;
 			// 
 			// button7
 			// 
@@ -1224,22 +1253,43 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->label1->Text = L"Statistiques génériques";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
-			// textBox35
+			// printStock
 			// 
-			this->textBox35->Location = System::Drawing::Point(19, 343);
-			this->textBox35->Margin = System::Windows::Forms::Padding(2);
-			this->textBox35->Name = L"textBox35";
-			this->textBox35->Size = System::Drawing::Size(352, 20);
-			this->textBox35->TabIndex = 9;
-			this->textBox35->Text = L"Taux de TVA";
-			this->textBox35->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox35_TextChanged);
+			this->printStock->Location = System::Drawing::Point(19, 171);
+			this->printStock->Margin = System::Windows::Forms::Padding(2);
+			this->printStock->Name = L"printStock";
+			this->printStock->Size = System::Drawing::Size(351, 38);
+			this->printStock->TabIndex = 10;
+			this->printStock->Text = L"Afficher tout";
+			this->printStock->UseVisualStyleBackColor = true;
+			// 
+			// finClient
+			// 
+			this->finClient->Location = System::Drawing::Point(211, 93);
+			this->finClient->Margin = System::Windows::Forms::Padding(2);
+			this->finClient->Name = L"finClient";
+			this->finClient->Size = System::Drawing::Size(161, 74);
+			this->finClient->TabIndex = 14;
+			this->finClient->Text = L"Rechercher";
+			this->finClient->UseVisualStyleBackColor = true;
+			this->finClient->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			// 
+			// printStaff
+			// 
+			this->printStaff->Location = System::Drawing::Point(19, 171);
+			this->printStaff->Margin = System::Windows::Forms::Padding(2);
+			this->printStaff->Name = L"printStaff";
+			this->printStaff->Size = System::Drawing::Size(351, 38);
+			this->printStaff->TabIndex = 15;
+			this->printStaff->Text = L"Afficher tout";
+			this->printStaff->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
-			this->ClientSize = System::Drawing::Size(852, 537);
+			this->ClientSize = System::Drawing::Size(856, 536);
 			this->Controls->Add(this->Tabcontrol);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(2);
@@ -1249,19 +1299,19 @@ private: System::Windows::Forms::TextBox^ textBox35;
 			this->Tabcontrol->ResumeLayout(false);
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStock))->EndInit();
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridClient))->EndInit();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStaff))->EndInit();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridOrder))->EndInit();
 			this->tabPage5->ResumeLayout(false);
 			this->tabPage5->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStats))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1294,12 +1344,18 @@ private: System::Void tabPage4_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void printClient_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->dataGridView1->Refresh();
+	this->dataGridClient->Refresh();
 	this->oDs = this->oSvc->selectionnerToutLesClients("Rsl");
-	this->dataGridView1->DataSource = this->oDs;
-	this->dataGridView1->DataMember = "Rsl";
+	this->dataGridClient->DataSource = this->oDs;
+	this->dataGridClient->DataMember = "Rsl";
 }
 private: System::Void textBox35_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dataGridStock_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void printStaff_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
