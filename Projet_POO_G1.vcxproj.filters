@@ -21,9 +21,30 @@
     <ClCompile Include="Projet_POO_G1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CLcad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CLmapClients.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CLservicesClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLcad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLmapClients.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLservicesClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
