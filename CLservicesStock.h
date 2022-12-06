@@ -1,17 +1,17 @@
 #pragma once
-#include "CLmapClients.h"
+#include "CLmapStock.h"
 #include "CLcad.h"
 
 namespace NS_Comp_Svc
 {
-	ref class CLservicesClient
+	ref class CLservicesStock
 	{
 	private:
 		NS_Comp_Data::CLcad^ oCad;
-		NS_Comp_Mappage::CLmapClient^ oMappClient;
+		NS_Comp_Mappage::CLmapStock^ oMappStock;
 	public:
-		CLservicesClient(void);
-		System::Data::DataSet^ selectionnerToutLesClients(System::String^);
+		CLservicesStock(void);
+		System::Data::DataSet^ selectionnerToutLesStocks(System::String^);
 		/*
 		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^);
 		void retirerUnePersonne(System::String^);

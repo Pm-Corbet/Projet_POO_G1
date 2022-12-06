@@ -122,7 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLmapClients.cpp" />
+    <ClCompile Include="CLmapStock.cpp" />
     <ClCompile Include="CLservicesClient.cpp" />
+    <ClCompile Include="CLservicesStock.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Projet_POO_G1.cpp" />
     <ClCompile Include="CLcad.cpp" />
@@ -130,7 +132,9 @@
   <ItemGroup>
     <ClInclude Include="CLcad.h" />
     <ClInclude Include="CLmapClients.h" />
+    <ClInclude Include="CLmapStock.h" />
     <ClInclude Include="CLservicesClient.h" />
+    <ClInclude Include="CLservicesStock.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

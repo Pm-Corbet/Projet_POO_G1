@@ -1,5 +1,6 @@
 #pragma once
 #include "CLservicesClient.h"
+#include "CLservicesStock.h"
 
 namespace ProjetPOOG1 {
 
@@ -42,7 +43,8 @@ namespace ProjetPOOG1 {
 
 	protected:
 	private: System::Data::DataSet^ oDs;
-	private: NS_Comp_Svc::CLservicesClient^ oSvc;
+	private: NS_Comp_Svc::CLservicesClient^ oSvcClient;
+	private: NS_Comp_Svc::CLservicesStock^ oSvcStock;
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
@@ -1262,6 +1264,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->printStock->TabIndex = 10;
 			this->printStock->Text = L"Afficher tout";
 			this->printStock->UseVisualStyleBackColor = true;
+			this->printStock->Click += gcnew System::EventHandler(this, &MyForm::printStock_Click);
 			// 
 			// finClient
 			// 
@@ -1321,7 +1324,8 @@ private: System::Void btn_load_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc = gcnew NS_Comp_Svc::CLservicesClient();
+	this->oSvcClient = gcnew NS_Comp_Svc::CLservicesClient();
+	this->oSvcStock = gcnew NS_Comp_Svc::CLservicesStock();
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1345,9 +1349,15 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void printClient_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->dataGridClient->Refresh();
-	this->oDs = this->oSvc->selectionnerToutLesClients("Rsl");
+	this->oDs = this->oSvcClient->selectionnerToutLesClients("Rsl");
 	this->dataGridClient->DataSource = this->oDs;
 	this->dataGridClient->DataMember = "Rsl";
+}
+private: System::Void printStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridStock->Refresh();
+	this->oDs = this->oSvcStock->selectionnerToutLesStocks("Rsl");
+	this->dataGridStock->DataSource = this->oDs;
+	this->dataGridStock->DataMember = "Rsl";
 }
 private: System::Void textBox35_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }

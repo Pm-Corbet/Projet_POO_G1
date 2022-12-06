@@ -1,16 +1,16 @@
 #include "pch.h"
-#include "CLservicesClient.h"
+#include "CLservicesStock.h"
 
-NS_Comp_Svc::CLservicesClient::CLservicesClient(void)
+NS_Comp_Svc::CLservicesStock::CLservicesStock(void)
 {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
-	this->oMappClient = gcnew NS_Comp_Mappage::CLmapClient();
+	this->oMappStock = gcnew NS_Comp_Mappage::CLmapStock();
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservicesClient::selectionnerToutLesClients(System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservicesStock::selectionnerToutLesStocks(System::String^ dataTableName)
 {
 	System::String^ sql;
 
-	sql = this->oMappClient->Select();
+	sql = this->oMappStock->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
 /*

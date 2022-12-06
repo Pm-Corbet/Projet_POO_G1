@@ -1,15 +1,15 @@
 #include "pch.h"
 #include "CLmapClients.h"
 
-System::String^ NS_Comp_Mappage::CLmapTB::Select(void)
+System::String^ NS_Comp_Mappage::CLmapClient::Select(void)
 {
-	return "SELECT * FROM client";
+	return "SELECT * FROM client INNER JOIN link_address on client.id_client = link_address.id_client INNER JOIN address on link_address.id_address = address.id_address INNER JOIN zipcode on address.id_zipcode = zipcode.id_zipcode INNER JOIN city on address.id_city = city.id_city INNER JOIN country on address.id_country = country.id_country INNER JOIN street_name on address.id_street_name = street_name.id_street_name";
 }
-System::String^ NS_Comp_Mappage::CLmapTB::Insert(void)
+System::String^ NS_Comp_Mappage::CLmapClient::Insert(void)
 {
 	return "INSERT INTO Table_P6 (nom, prenom) VALUES('" + this->last_name + "','" + this->first_name + "');";
 }
-System::String^ NS_Comp_Mappage::CLmapTB::Delete(void)
+System::String^ NS_Comp_Mappage::CLmapClient::Delete(void)
 {
 	if (this->id_client->Equals("")) {
 		return "DELETE FROM [Prosit6_DB].[dbo].[Table_P6] \
@@ -18,7 +18,7 @@ System::String^ NS_Comp_Mappage::CLmapTB::Delete(void)
 	else return "DELETE FROM [Prosit6_DB].[dbo].[Table_P6] WHERE id = " + this->id_client + " \
 				 DELETE FROM [Prosit6_DB].[dbo].[Adresses] WHERE id = " + this->id_client + ";";
 }
-System::String^ NS_Comp_Mappage::CLmapTB::Update(void)
+System::String^ NS_Comp_Mappage::CLmapClient::Update(void)
 {
 	System::String^ sql = " ";
 
@@ -32,34 +32,34 @@ System::String^ NS_Comp_Mappage::CLmapTB::Update(void)
 
 	return sql;
 }
-void NS_Comp_Mappage::CLmapTB::setLastName(System::String^ last_name)
+void NS_Comp_Mappage::CLmapClient::setLastName(System::String^ last_name)
 {
 	this->last_name = last_name;
 }
-void NS_Comp_Mappage::CLmapTB::setFirstName(System::String^ first_name)
+void NS_Comp_Mappage::CLmapClient::setFirstName(System::String^ first_name)
 {
 	this->first_name = first_name;
 }
-void NS_Comp_Mappage::CLmapTB::setDateOfBirth(System::String^ date_of_birth)
+void NS_Comp_Mappage::CLmapClient::setDateOfBirth(System::String^ date_of_birth)
 {
 	this->date_of_birth = date_of_birth;
 }
-void NS_Comp_Mappage::CLmapTB::setEmail(System::String^ email)
+void NS_Comp_Mappage::CLmapClient::setEmail(System::String^ email)
 {
 	this->email = email;
 }
-void NS_Comp_Mappage::CLmapTB::setPhone(System::String^ phone)
+void NS_Comp_Mappage::CLmapClient::setPhone(System::String^ phone)
 {
 	this->phone = phone;
 }
-void NS_Comp_Mappage::CLmapTB::setIsEnabled(System::String^ is_enabled)
+void NS_Comp_Mappage::CLmapClient::setIsEnabled(System::String^ is_enabled)
 {
 	this->is_enabled = is_enabled;
 }
-System::String^ NS_Comp_Mappage::CLmapTB::getFirstName(void) { return this->first_name; }
-System::String^ NS_Comp_Mappage::CLmapTB::getLastName(void) { return this->last_name; }
-System::String^ NS_Comp_Mappage::CLmapTB::getId(void) { return this->id_client; }
-System::String^ NS_Comp_Mappage::CLmapTB::getDateOfBirth(void) { return this->date_of_birth; }
-System::String^ NS_Comp_Mappage::CLmapTB::getEmail(void) { return this->email; }
-System::String^ NS_Comp_Mappage::CLmapTB::getPhone(void) { return this->phone; }
-System::String^ NS_Comp_Mappage::CLmapTB::getIsEnabled(void) { return this->is_enabled; }
+System::String^ NS_Comp_Mappage::CLmapClient::getFirstName(void) { return this->first_name; }
+System::String^ NS_Comp_Mappage::CLmapClient::getLastName(void) { return this->last_name; }
+System::String^ NS_Comp_Mappage::CLmapClient::getId(void) { return this->id_client; }
+System::String^ NS_Comp_Mappage::CLmapClient::getDateOfBirth(void) { return this->date_of_birth; }
+System::String^ NS_Comp_Mappage::CLmapClient::getEmail(void) { return this->email; }
+System::String^ NS_Comp_Mappage::CLmapClient::getPhone(void) { return this->phone; }
+System::String^ NS_Comp_Mappage::CLmapClient::getIsEnabled(void) { return this->is_enabled; }
