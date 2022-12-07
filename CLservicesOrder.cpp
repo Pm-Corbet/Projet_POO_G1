@@ -31,3 +31,11 @@ System::Data::DataSet^ NS_Comp_Svc::CLservicesOrder::rechercherCommande(System::
 
 	return this->oCad->getRows(sql, dataTableName);
 }
+void NS_Comp_Svc::CLservicesOrder::supprimerCommande(System::String^ dataTableName, System::String^ reference)
+{
+	System::String^ sql;
+
+	this->oMappOrder->setReference(reference);
+	sql = this->oMappOrder->Delete();
+	this->oCad->actionRows(sql);
+}

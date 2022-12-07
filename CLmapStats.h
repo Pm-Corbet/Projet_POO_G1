@@ -9,5 +9,8 @@ namespace NS_Comp_Mappage
 		System::String^ top10(void);
 		System::String^ avgPanier(void);
 		System::String^ alerteStock(void);
+		System::String^ prixAchat(void);
+		System::String^ simulationPrix(System::String^ tva, System::String^ marge, System::String^ remise, System::String^ demarque);
+		System::String^ totalAmountClient(void);
 	};
 }

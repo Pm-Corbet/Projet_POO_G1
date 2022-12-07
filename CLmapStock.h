@@ -22,6 +22,7 @@ namespace NS_Comp_Mappage
 		System::String^ Delete(void);
 		System::String^ Update(void);
 		void setItemIsEnabled(System::String^);
+		void setIdItem(System::String^);
 		System::String^ getTypeItemIsEnabled(void);
 		System::String^ getName(void);
 		System::String^ getItemIsEnabled(void);

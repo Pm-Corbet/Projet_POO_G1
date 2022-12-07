@@ -14,9 +14,8 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ calculerTop10(System::String^);
 		System::Data::DataSet^ calculerPanierMoyen(System::String^);
 		System::Data::DataSet^ calculerAlerteStock(System::String^);
-		/*
-		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^);
-		void retirerUnePersonne(System::String^);
-		void modifierUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);*/
+		System::Data::DataSet^ calculerPrixAchat(System::String^);
+		System::Data::DataSet^ simulerPrix(System::String^ dataTableName, System::String^ tva, System::String^ marge, System::String^ remise, System::String^ demarque);
+		System::Data::DataSet^ calculerTotalAmountClient(System::String^);
 	};
 }

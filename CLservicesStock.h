@@ -12,6 +12,7 @@ namespace NS_Comp_Svc
 	public:
 		CLservicesStock(void);
 		System::Data::DataSet^ selectionnerToutLesStocks(System::String^);
+		void retirerStock(System::String^, System::String^);
 		/*
 		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^);
 		void retirerUnePersonne(System::String^);

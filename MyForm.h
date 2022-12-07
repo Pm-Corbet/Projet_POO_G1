@@ -119,14 +119,21 @@ namespace ProjetPOOG1 {
 
 
 	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::ComboBox^ TVABox;
+
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::TextBox^ textBox14;
 	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Button^ button11;
-	private: System::Windows::Forms::ComboBox^ comboBox4;
-	private: System::Windows::Forms::ComboBox^ comboBox3;
-	private: System::Windows::Forms::ComboBox^ comboBox2;
+private: System::Windows::Forms::Button^ simulateStats;
+
+
+private: System::Windows::Forms::ComboBox^ demarqueInconnueBox;
+
+private: System::Windows::Forms::ComboBox^ remiseCommercialeBox;
+private: System::Windows::Forms::ComboBox^ margeCommercialeBox;
+
+
+
 	private: System::Windows::Forms::Button^ findStaff;
 
 
@@ -137,6 +144,7 @@ namespace ProjetPOOG1 {
 	private: System::Windows::Forms::Button^ addStaff;
 	private: System::Windows::Forms::DataGridView^ dataGridStaff;
 	private: System::Windows::Forms::Button^ findStock;
+private: System::Windows::Forms::Button^ deleteStock;
 
 
 
@@ -144,7 +152,8 @@ namespace ProjetPOOG1 {
 
 
 
-	private: System::Windows::Forms::Button^ deleteStock;
+
+
 
 
 	private: System::Windows::Forms::Button^ updateStock;
@@ -175,7 +184,8 @@ private: System::Windows::Forms::TextBox^ emailStaff;
 	private: System::Windows::Forms::TextBox^ textBox17;
 	private: System::Windows::Forms::TextBox^ textBox16;
 	private: System::Windows::Forms::TextBox^ textBox15;
-	private: System::Windows::Forms::TextBox^ textBox25;
+private: System::Windows::Forms::TextBox^ idStocks;
+
 	private: System::Windows::Forms::TextBox^ textBox24;
 private: System::Windows::Forms::TextBox^ textBox27;
 private: System::Windows::Forms::TextBox^ textBox26;
@@ -213,6 +223,12 @@ private: System::Windows::Forms::CheckBox^ is_enabledOrder;
 private: System::Windows::Forms::TextBox^ emailOrder;
 private: System::Windows::Forms::TextBox^ phoneOrder;
 private: System::Windows::Forms::Button^ avgPanierStats;
+private: System::Windows::Forms::Button^ printBuyCostStats;
+private: System::Windows::Forms::Button^ totalAmountClientStats;
+
+
+
+
 
 
 
@@ -243,7 +259,7 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox27 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox26 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox25 = (gcnew System::Windows::Forms::TextBox());
+			this->idStocks = (gcnew System::Windows::Forms::TextBox());
 			this->textBox24 = (gcnew System::Windows::Forms::TextBox());
 			this->findStock = (gcnew System::Windows::Forms::Button());
 			this->deleteStock = (gcnew System::Windows::Forms::Button());
@@ -303,16 +319,18 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->addOrder = (gcnew System::Windows::Forms::Button());
 			this->dataGridOrder = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->totalAmountClientStats = (gcnew System::Windows::Forms::Button());
+			this->printBuyCostStats = (gcnew System::Windows::Forms::Button());
 			this->avgPanierStats = (gcnew System::Windows::Forms::Button());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->button11 = (gcnew System::Windows::Forms::Button());
-			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
-			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->simulateStats = (gcnew System::Windows::Forms::Button());
+			this->demarqueInconnueBox = (gcnew System::Windows::Forms::ComboBox());
+			this->remiseCommercialeBox = (gcnew System::Windows::Forms::ComboBox());
+			this->margeCommercialeBox = (gcnew System::Windows::Forms::ComboBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->TVABox = (gcnew System::Windows::Forms::ComboBox());
 			this->printAlerteStock = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->printTop10 = (gcnew System::Windows::Forms::Button());
@@ -358,7 +376,7 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->tabPage3->Controls->Add(this->textBox35);
 			this->tabPage3->Controls->Add(this->textBox27);
 			this->tabPage3->Controls->Add(this->textBox26);
-			this->tabPage3->Controls->Add(this->textBox25);
+			this->tabPage3->Controls->Add(this->idStocks);
 			this->tabPage3->Controls->Add(this->textBox24);
 			this->tabPage3->Controls->Add(this->findStock);
 			this->tabPage3->Controls->Add(this->deleteStock);
@@ -413,15 +431,15 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->textBox26->TabIndex = 7;
 			this->textBox26->Text = L"Quantité";
 			// 
-			// textBox25
+			// idStocks
 			// 
-			this->textBox25->Location = System::Drawing::Point(19, 274);
-			this->textBox25->Margin = System::Windows::Forms::Padding(2);
-			this->textBox25->Name = L"textBox25";
-			this->textBox25->Size = System::Drawing::Size(352, 20);
-			this->textBox25->TabIndex = 6;
-			this->textBox25->Text = L"Référence";
-			this->textBox25->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox25_TextChanged);
+			this->idStocks->Location = System::Drawing::Point(19, 274);
+			this->idStocks->Margin = System::Windows::Forms::Padding(2);
+			this->idStocks->Name = L"idStocks";
+			this->idStocks->Size = System::Drawing::Size(352, 20);
+			this->idStocks->TabIndex = 6;
+			this->idStocks->Text = L"Numéro unique";
+			this->idStocks->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox25_TextChanged);
 			// 
 			// textBox24
 			// 
@@ -452,6 +470,7 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->deleteStock->TabIndex = 3;
 			this->deleteStock->Text = L"Supprimer l\'article";
 			this->deleteStock->UseVisualStyleBackColor = true;
+			this->deleteStock->Click += gcnew System::EventHandler(this, &MyForm::deleteStock_Click);
 			// 
 			// updateStock
 			// 
@@ -1023,6 +1042,7 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->deleteOrder->TabIndex = 3;
 			this->deleteOrder->Text = L"Supprimer commande";
 			this->deleteOrder->UseVisualStyleBackColor = true;
+			this->deleteOrder->Click += gcnew System::EventHandler(this, &MyForm::deleteOrder_Click);
 			// 
 			// updateOrder
 			// 
@@ -1057,16 +1077,18 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->totalAmountClientStats);
+			this->tabPage5->Controls->Add(this->printBuyCostStats);
 			this->tabPage5->Controls->Add(this->avgPanierStats);
 			this->tabPage5->Controls->Add(this->label11);
 			this->tabPage5->Controls->Add(this->textBox14);
 			this->tabPage5->Controls->Add(this->label10);
-			this->tabPage5->Controls->Add(this->button11);
-			this->tabPage5->Controls->Add(this->comboBox4);
-			this->tabPage5->Controls->Add(this->comboBox3);
-			this->tabPage5->Controls->Add(this->comboBox2);
+			this->tabPage5->Controls->Add(this->simulateStats);
+			this->tabPage5->Controls->Add(this->demarqueInconnueBox);
+			this->tabPage5->Controls->Add(this->remiseCommercialeBox);
+			this->tabPage5->Controls->Add(this->margeCommercialeBox);
 			this->tabPage5->Controls->Add(this->label9);
-			this->tabPage5->Controls->Add(this->comboBox1);
+			this->tabPage5->Controls->Add(this->TVABox);
 			this->tabPage5->Controls->Add(this->printAlerteStock);
 			this->tabPage5->Controls->Add(this->button9);
 			this->tabPage5->Controls->Add(this->printTop10);
@@ -1089,9 +1111,31 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->tabPage5->UseVisualStyleBackColor = true;
 			this->tabPage5->Click += gcnew System::EventHandler(this, &MyForm::tabPage5_Click);
 			// 
+			// totalAmountClientStats
+			// 
+			this->totalAmountClientStats->Location = System::Drawing::Point(338, 161);
+			this->totalAmountClientStats->Margin = System::Windows::Forms::Padding(2);
+			this->totalAmountClientStats->Name = L"totalAmountClientStats";
+			this->totalAmountClientStats->Size = System::Drawing::Size(112, 44);
+			this->totalAmountClientStats->TabIndex = 30;
+			this->totalAmountClientStats->Text = L"Montant total dépenses client";
+			this->totalAmountClientStats->UseVisualStyleBackColor = true;
+			this->totalAmountClientStats->Click += gcnew System::EventHandler(this, &MyForm::totalAmountClientStats_Click);
+			// 
+			// printBuyCostStats
+			// 
+			this->printBuyCostStats->Location = System::Drawing::Point(175, 161);
+			this->printBuyCostStats->Margin = System::Windows::Forms::Padding(2);
+			this->printBuyCostStats->Name = L"printBuyCostStats";
+			this->printBuyCostStats->Size = System::Drawing::Size(112, 45);
+			this->printBuyCostStats->TabIndex = 29;
+			this->printBuyCostStats->Text = L"Prix d\'achat du stock";
+			this->printBuyCostStats->UseVisualStyleBackColor = true;
+			this->printBuyCostStats->Click += gcnew System::EventHandler(this, &MyForm::printBuyCostStats_Click);
+			// 
 			// avgPanierStats
 			// 
-			this->avgPanierStats->Location = System::Drawing::Point(14, 126);
+			this->avgPanierStats->Location = System::Drawing::Point(338, 54);
 			this->avgPanierStats->Margin = System::Windows::Forms::Padding(2);
 			this->avgPanierStats->Name = L"avgPanierStats";
 			this->avgPanierStats->Size = System::Drawing::Size(112, 32);
@@ -1133,51 +1177,52 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->label10->TabIndex = 25;
 			this->label10->Text = L"Calcul le chiffer d\'affaire sur un mois particulier :";
 			// 
-			// button11
+			// simulateStats
 			// 
-			this->button11->Location = System::Drawing::Point(338, 447);
-			this->button11->Margin = System::Windows::Forms::Padding(2);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(112, 32);
-			this->button11->TabIndex = 24;
-			this->button11->Text = L"Simulation";
-			this->button11->UseVisualStyleBackColor = true;
+			this->simulateStats->Location = System::Drawing::Point(338, 447);
+			this->simulateStats->Margin = System::Windows::Forms::Padding(2);
+			this->simulateStats->Name = L"simulateStats";
+			this->simulateStats->Size = System::Drawing::Size(112, 32);
+			this->simulateStats->TabIndex = 24;
+			this->simulateStats->Text = L"Simulation";
+			this->simulateStats->UseVisualStyleBackColor = true;
+			this->simulateStats->Click += gcnew System::EventHandler(this, &MyForm::simulateStats_Click);
 			// 
-			// comboBox4
+			// demarqueInconnueBox
 			// 
-			this->comboBox4->FormattingEnabled = true;
-			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+			this->demarqueInconnueBox->FormattingEnabled = true;
+			this->demarqueInconnueBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
 				L"Démarque Inconnue 2%", L"Démarque Inconnue 3%",
 					L"Démarque Inconnue 5%"
 			});
-			this->comboBox4->Location = System::Drawing::Point(252, 422);
-			this->comboBox4->Margin = System::Windows::Forms::Padding(2);
-			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(199, 21);
-			this->comboBox4->TabIndex = 23;
+			this->demarqueInconnueBox->Location = System::Drawing::Point(252, 422);
+			this->demarqueInconnueBox->Margin = System::Windows::Forms::Padding(2);
+			this->demarqueInconnueBox->Name = L"demarqueInconnueBox";
+			this->demarqueInconnueBox->Size = System::Drawing::Size(199, 21);
+			this->demarqueInconnueBox->TabIndex = 23;
 			// 
-			// comboBox3
+			// remiseCommercialeBox
 			// 
-			this->comboBox3->FormattingEnabled = true;
-			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Remise commerciale 3%", L"Remise commerciale 6%" });
-			this->comboBox3->Location = System::Drawing::Point(252, 399);
-			this->comboBox3->Margin = System::Windows::Forms::Padding(2);
-			this->comboBox3->Name = L"comboBox3";
-			this->comboBox3->Size = System::Drawing::Size(198, 21);
-			this->comboBox3->TabIndex = 22;
+			this->remiseCommercialeBox->FormattingEnabled = true;
+			this->remiseCommercialeBox->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Remise commerciale 3%", L"Remise commerciale 6%" });
+			this->remiseCommercialeBox->Location = System::Drawing::Point(252, 399);
+			this->remiseCommercialeBox->Margin = System::Windows::Forms::Padding(2);
+			this->remiseCommercialeBox->Name = L"remiseCommercialeBox";
+			this->remiseCommercialeBox->Size = System::Drawing::Size(198, 21);
+			this->remiseCommercialeBox->TabIndex = 22;
 			// 
-			// comboBox2
+			// margeCommercialeBox
 			// 
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+			this->margeCommercialeBox->FormattingEnabled = true;
+			this->margeCommercialeBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
 				L"Marge commerciale 10%", L"Marge commerciale 15%",
 					L"Marge commerciale 20%"
 			});
-			this->comboBox2->Location = System::Drawing::Point(252, 375);
-			this->comboBox2->Margin = System::Windows::Forms::Padding(2);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(199, 21);
-			this->comboBox2->TabIndex = 21;
+			this->margeCommercialeBox->Location = System::Drawing::Point(252, 375);
+			this->margeCommercialeBox->Margin = System::Windows::Forms::Padding(2);
+			this->margeCommercialeBox->Name = L"margeCommercialeBox";
+			this->margeCommercialeBox->Size = System::Drawing::Size(199, 21);
+			this->margeCommercialeBox->TabIndex = 21;
 			// 
 			// label9
 			// 
@@ -1191,15 +1236,16 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			this->label9->TabIndex = 20;
 			this->label9->Text = L"Simulation";
 			// 
-			// comboBox1
+			// TVABox
 			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"TVA 5%", L"TVA 10%", L"TVA 15%" });
-			this->comboBox1->Location = System::Drawing::Point(252, 351);
-			this->comboBox1->Margin = System::Windows::Forms::Padding(2);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(200, 21);
-			this->comboBox1->TabIndex = 19;
+			this->TVABox->FormattingEnabled = true;
+			this->TVABox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"TVA 5%", L"TVA 10%", L"TVA 15%" });
+			this->TVABox->Location = System::Drawing::Point(252, 351);
+			this->TVABox->Margin = System::Windows::Forms::Padding(2);
+			this->TVABox->Name = L"TVABox";
+			this->TVABox->Size = System::Drawing::Size(200, 21);
+			this->TVABox->TabIndex = 19;
+			this->TVABox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox1_SelectedIndexChanged);
 			// 
 			// printAlerteStock
 			// 
@@ -1214,7 +1260,7 @@ private: System::Windows::Forms::Button^ avgPanierStats;
 			// 
 			// button9
 			// 
-			this->button9->Location = System::Drawing::Point(14, 90);
+			this->button9->Location = System::Drawing::Point(175, 54);
 			this->button9->Margin = System::Windows::Forms::Padding(2);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(112, 32);
@@ -1422,6 +1468,10 @@ private: System::Void printStock_Click(System::Object^ sender, System::EventArgs
 	this->dataGridStock->DataSource = this->oDs;
 	this->dataGridStock->DataMember = "Rsl";
 }
+private: System::Void deleteStock_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->oSvcStock->retirerStock("Rsl", this->idStocks->Text);
+}	   
 private: System::Void deleteStaff_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	this->oSvcStaff->retirerStaff("Rsl", this->phoneStaff->Text, this->emailStaff->Text);
@@ -1437,6 +1487,11 @@ private: System::Void printOrder_Click(System::Object^ sender, System::EventArgs
 	this->oDs = this->oSvcOrder->selectionnerToutLesCommandes("Rsl");
 	this->dataGridOrder->DataSource = this->oDs;
 	this->dataGridOrder->DataMember = "Rsl";
+}
+private: System::Void deleteOrder_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->oSvcOrder->supprimerCommande("Rsl", this->referenceOrder->Text);
+
 }
 private: System::Void findOrder_Click(System::Object^ sender, System::EventArgs^ e) {
 	System::String^ is_enabled;
@@ -1486,10 +1541,93 @@ private: System::Void avgPanierStats_Click(System::Object^ sender, System::Event
 }
 private: System::Void printAlerteStock_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->dataGridStats->Refresh();
+	
 	this->oDs = this->oSvcStats->calculerAlerteStock("Rsl");
 	this->dataGridStats->DataSource = this->oDs;
 	this->dataGridStats->DataMember = "Rsl";
 }
+private: System::Void printBuyCostStats_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridStats->Refresh();
+	this->oDs = this->oSvcStats->calculerPrixAchat("Rsl");
+	this->dataGridStats->DataSource = this->oDs;
+	this->dataGridStats->DataMember = "Rsl";
+}
+private: System::Void simulateStats_Click(System::Object^ sender, System::EventArgs^ e) {
+	System::String^ tva = this->TVABox->Text;
+	if (this->TVABox->Text == "TVA 5%")
+	{
+		tva = "5";
+	}
+	else if (this->TVABox->Text == "TVA 10%")
+	{
+		tva = "10";
+	}
+	else if (this->TVABox->Text == "TVA 15%")
+	{
+		tva = "15";
+	}
+	else
+	{
+		tva = "0";
+	}
+	System::String^ margeCommerciale;
+	if (this->margeCommercialeBox->Text == "Marge commerciale 10%")
+	{
+		margeCommerciale = "10";
+	}
+	else if (this->margeCommercialeBox->Text == "Marge commerciale 15%")
+	{
+		margeCommerciale = "15";
+	}
+	else if (this->margeCommercialeBox->Text == "Marge commerciale 20%")
+	{
+		margeCommerciale = "20";
+	}
+	else
+	{
+		margeCommerciale = "0";
+	}
+	System::String^ remiseCommerciale;
+	if (this->remiseCommercialeBox->Text == "Remise commerciale 3%")
+	{
+		remiseCommerciale = "3";
+	}
+	else if (this->remiseCommercialeBox->Text == "Remise commerciale 6%")
+	{
+		remiseCommerciale = "6";
+	}
+	else
+	{
+		remiseCommerciale = "0";
+	}
+	System::String^ demarqueInconnue;
+	if (this->demarqueInconnueBox->Text == "Démarque Inconnue 2%")
+	{
+		demarqueInconnue = "2";
+	}
+	else if (this->demarqueInconnueBox->Text == "Démarque Inconnue 3%")
+	{
+		demarqueInconnue = "3";
+	}
+	else if (this->demarqueInconnueBox->Text == "Démarque Inconnue 5%")
+	{
+		demarqueInconnue = "5";
+	}
+	else
+	{
+		demarqueInconnue = "0";
+	}
+	this->dataGridStats->Refresh();
+	this->oDs = this->oSvcStats->simulerPrix("Rsl", tva, margeCommerciale, remiseCommerciale, demarqueInconnue);
+	this->dataGridStats->DataSource = this->oDs;
+	this->dataGridStats->DataMember = "Rsl";
+}
+private: System::Void totalAmountClientStats_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridStats->Refresh();
+	this->oDs = this->oSvcStats->calculerTotalAmountClient("Rsl");
+	this->dataGridStats->DataSource = this->oDs;
+	this->dataGridStats->DataMember = "Rsl";
+}	   
 private: System::Void textBox35_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void dataGridStock_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
@@ -1513,5 +1651,11 @@ private: System::Void textBox30_TextChanged(System::Object^ sender, System::Even
 }
 private: System::Void textBox34_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+
+
 };
 }

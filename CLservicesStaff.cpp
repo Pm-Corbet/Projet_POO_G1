@@ -13,7 +13,6 @@ System::Data::DataSet^ NS_Comp_Svc::CLservicesStaff::selectionnerToutLesStaff(Sy
 	sql = this->oMappStaff->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
-
 void NS_Comp_Svc::CLservicesStaff::retirerStaff(System::String^ dataTableName, System::String^ phone, System::String^ email)
 {
 	System::String^ sql;

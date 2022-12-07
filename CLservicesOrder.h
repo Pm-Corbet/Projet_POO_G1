@@ -13,9 +13,6 @@ namespace NS_Comp_Svc
 		CLservicesOrder(void);
 		System::Data::DataSet^ selectionnerToutLesCommandes(System::String^);
 		System::Data::DataSet^ rechercherCommande(System::String^ dataTableName, System::String^ reference, System::String^ phone, System::String^ email, System::String^ delivery_datetime, System::String^ emission_datetime, System::String^ payment_number, System::String^ total_amount, System::String^ name, System::String^ is_enabled);
-		/*
-		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^);
-		void retirerUnePersonne(System::String^);
-		void modifierUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);*/
+		void supprimerCommande(System::String^ dataTableName, System::String^ reference);
 	};
 }

@@ -3,7 +3,7 @@
 
 System::String^ NS_Comp_Mappage::CLmapOrder::Select(void)
 {
-	return "SELECT reference, delivery_datetime, emission_date, payment_number, total_amount, orders.is_enabled as Active, item.id_item, type_item.name, price.HT_price, TVA_rate FROM orders INNER JOIN composed_of on orders.id_order = composed_of.id_order INNER JOIN item on composed_of.id_item = item.id_item INNER JOIN type_item on type_item.id_type_item = item.id_type_item INNER JOIN price on type_item.id_type_item = price.id_type_item WHERE price.is_enabled = 1";
+	return "SELECT reference, delivery_datetime, emission_date, payment_number, total_amount, orders.is_enabled as Active, item.id_item, type_item.name, price.HT_price, TVA_rate FROM orders INNER JOIN composed_of on orders.id_order = composed_of.id_order INNER JOIN item on composed_of.id_item = item.id_item INNER JOIN type_item on type_item.id_type_item = item.id_type_item INNER JOIN price on type_item.id_type_item = price.id_type_item WHERE price.is_enabled = 1 AND orders.is_enabled = 1";
 }
 System::String^ NS_Comp_Mappage::CLmapOrder::Insert(void)
 {
@@ -11,11 +11,7 @@ System::String^ NS_Comp_Mappage::CLmapOrder::Insert(void)
 }
 System::String^ NS_Comp_Mappage::CLmapOrder::Delete(void)
 {
-	if (this->id_order->Equals("")) {
-		return "DELETE FROM [Prosit6_DB].[dbo].[Table_P6] \
-				DELETE FROM [Prosit6_DB].[dbo].[Adresses]";
-	}
-	else return " ";
+	return "UPDATE orders SET is_enabled = 0 WHERE reference = '" + this->reference + "'";
 }
 System::String^ NS_Comp_Mappage::CLmapOrder::Update(void)
 {

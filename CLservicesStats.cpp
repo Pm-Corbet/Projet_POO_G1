@@ -31,4 +31,29 @@ System::Data::DataSet^ NS_Comp_Svc::CLservicesStats::calculerAlerteStock(System:
 
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::CLservicesStats::calculerPrixAchat(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappStats->prixAchat();
+
+	return this->oCad->getRows(sql, dataTableName);
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservicesStats::simulerPrix(System::String^ dataTableName, System::String^ tva, System::String^ marge, System::String^ remise, System::String^ demarque)
+{
+	System::String^ sql;
+
+	sql = this->oMappStats->simulationPrix(tva, marge, remise, demarque);
+
+	return this->oCad->getRows(sql, dataTableName);
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservicesStats::calculerTotalAmountClient(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappStats->totalAmountClient();
+
+	return this->oCad->getRows(sql, dataTableName);
+}
+
 
