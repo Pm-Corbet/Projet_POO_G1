@@ -1,6 +1,10 @@
 #pragma once
 #include "CLservicesClient.h"
 #include "CLservicesStock.h"
+#include "CLservicesStaff.h"
+#include "CLservicesOrder.h"
+#include "CLservicesAddress.h"
+#include "CLservicesStats.h"
 
 namespace ProjetPOOG1 {
 
@@ -45,25 +49,45 @@ namespace ProjetPOOG1 {
 	private: System::Data::DataSet^ oDs;
 	private: NS_Comp_Svc::CLservicesClient^ oSvcClient;
 	private: NS_Comp_Svc::CLservicesStock^ oSvcStock;
+	private: NS_Comp_Svc::CLservicesStaff^ oSvcStaff;
+	private: NS_Comp_Svc::CLservicesOrder^ oSvcOrder;
+	private: NS_Comp_Svc::CLservicesAddress^ oSvcAddress;
+	private: NS_Comp_Svc::CLservicesStats^ oSvcStats;
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
 	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::Button^ addClient;
+	private: System::Windows::Forms::TextBox^ phoneClient;
+
+	private: System::Windows::Forms::TextBox^ emailClient;
 
 
 
 
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
+
+
+	private: System::Windows::Forms::TextBox^ countryClient;
+
+
+	private: System::Windows::Forms::TextBox^ numberClient;
+
+	private: System::Windows::Forms::TextBox^ zipcodeClient;
+
+
+	private: System::Windows::Forms::TextBox^ cityClient;
+	private: System::Windows::Forms::TextBox^ street_nameClient;
+
+	private: System::Windows::Forms::TextBox^ first_nameClient;
+	private: System::Windows::Forms::TextBox^ last_nameClient;
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^ updateClient;
 
 	private: System::Windows::Forms::Button^ deleteClient;
@@ -72,21 +96,22 @@ namespace ProjetPOOG1 {
 
 
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label5;
+
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label2;
+
+
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::TextBox^ textBox13;
 	private: System::Windows::Forms::TextBox^ textBox12;
 	private: System::Windows::Forms::TextBox^ textBox11;
 	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Button^ button10;
+	private: System::Windows::Forms::Button^ printAlerteStock;
+
+
+
+
+
 	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::Button^ printTop10;
 	private: System::Windows::Forms::DataGridView^ dataGridStats;
@@ -137,11 +162,13 @@ private: System::Windows::Forms::Button^ updateOrder;
 
 private: System::Windows::Forms::Button^ addOrder;
 private: System::Windows::Forms::DataGridView^ dataGridOrder;
+private: System::Windows::Forms::TextBox^ phoneStaff;
 
 
-	private: System::Windows::Forms::TextBox^ textBox23;
+
 	private: System::Windows::Forms::TextBox^ textBox22;
-	private: System::Windows::Forms::TextBox^ textBox21;
+private: System::Windows::Forms::TextBox^ emailStaff;
+
 	private: System::Windows::Forms::TextBox^ textBox20;
 	private: System::Windows::Forms::TextBox^ textBox19;
 	private: System::Windows::Forms::TextBox^ textBox18;
@@ -152,25 +179,42 @@ private: System::Windows::Forms::DataGridView^ dataGridOrder;
 	private: System::Windows::Forms::TextBox^ textBox24;
 private: System::Windows::Forms::TextBox^ textBox27;
 private: System::Windows::Forms::TextBox^ textBox26;
-private: System::Windows::Forms::TextBox^ textBox34;
-private: System::Windows::Forms::TextBox^ textBox33;
-private: System::Windows::Forms::TextBox^ textBox32;
-private: System::Windows::Forms::TextBox^ textBox31;
-private: System::Windows::Forms::TextBox^ textBox30;
-private: System::Windows::Forms::TextBox^ textBox29;
-private: System::Windows::Forms::TextBox^ textBox28;
-private: System::Windows::Forms::Button^ deleteItemOrder;
+private: System::Windows::Forms::TextBox^ emission_datetimeOrder;
+private: System::Windows::Forms::TextBox^ payment_numberOrder;
+private: System::Windows::Forms::TextBox^ total_amountOrder;
+private: System::Windows::Forms::TextBox^ item_nameOrder;
+
+
+
+
+
+private: System::Windows::Forms::TextBox^ delivery_datetimeOrder;
+private: System::Windows::Forms::TextBox^ referenceOrder;
+
+
+private: System::Windows::Forms::Button^ findOrder;
+
 private: System::Windows::Forms::Button^ addItemOrder;
 
 private: System::Windows::Forms::TextBox^ textBox35;
 private: System::Windows::Forms::DataGridView^ dataGridClient;
 private: System::Windows::Forms::Button^ printStock;
-private: System::Windows::Forms::Button^ finClient;
+private: System::Windows::Forms::Button^ findClient;
+
 
 
 
 private: System::Windows::Forms::Button^ printStaff;
 private: System::Windows::Forms::Button^ printClient;
+private: System::Windows::Forms::TextBox^ date_of_birthClient;
+private: System::Windows::Forms::CheckBox^ addressCheck;
+private: System::Windows::Forms::TextBox^ complementClient;
+private: System::Windows::Forms::CheckBox^ is_enabledOrder;
+private: System::Windows::Forms::TextBox^ emailOrder;
+private: System::Windows::Forms::TextBox^ phoneOrder;
+private: System::Windows::Forms::Button^ avgPanierStats;
+
+
 
 
 
@@ -195,6 +239,7 @@ private: System::Windows::Forms::Button^ printClient;
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->Tabcontrol = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->printStock = (gcnew System::Windows::Forms::Button());
 			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox27 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox26 = (gcnew System::Windows::Forms::TextBox());
@@ -206,24 +251,29 @@ private: System::Windows::Forms::Button^ printClient;
 			this->addStock = (gcnew System::Windows::Forms::Button());
 			this->dataGridStock = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->complementClient = (gcnew System::Windows::Forms::TextBox());
+			this->addressCheck = (gcnew System::Windows::Forms::CheckBox());
+			this->date_of_birthClient = (gcnew System::Windows::Forms::TextBox());
+			this->findClient = (gcnew System::Windows::Forms::Button());
 			this->printClient = (gcnew System::Windows::Forms::Button());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->phoneClient = (gcnew System::Windows::Forms::TextBox());
+			this->emailClient = (gcnew System::Windows::Forms::TextBox());
+			this->countryClient = (gcnew System::Windows::Forms::TextBox());
+			this->numberClient = (gcnew System::Windows::Forms::TextBox());
+			this->zipcodeClient = (gcnew System::Windows::Forms::TextBox());
+			this->cityClient = (gcnew System::Windows::Forms::TextBox());
+			this->street_nameClient = (gcnew System::Windows::Forms::TextBox());
+			this->first_nameClient = (gcnew System::Windows::Forms::TextBox());
+			this->last_nameClient = (gcnew System::Windows::Forms::TextBox());
 			this->updateClient = (gcnew System::Windows::Forms::Button());
 			this->deleteClient = (gcnew System::Windows::Forms::Button());
 			this->addClient = (gcnew System::Windows::Forms::Button());
 			this->dataGridClient = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->textBox23 = (gcnew System::Windows::Forms::TextBox());
+			this->printStaff = (gcnew System::Windows::Forms::Button());
+			this->phoneStaff = (gcnew System::Windows::Forms::TextBox());
 			this->textBox22 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox21 = (gcnew System::Windows::Forms::TextBox());
+			this->emailStaff = (gcnew System::Windows::Forms::TextBox());
 			this->textBox20 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox19 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox18 = (gcnew System::Windows::Forms::TextBox());
@@ -236,14 +286,16 @@ private: System::Windows::Forms::Button^ printClient;
 			this->addStaff = (gcnew System::Windows::Forms::Button());
 			this->dataGridStaff = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->textBox34 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox33 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox32 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox31 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox30 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox29 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox28 = (gcnew System::Windows::Forms::TextBox());
-			this->deleteItemOrder = (gcnew System::Windows::Forms::Button());
+			this->emailOrder = (gcnew System::Windows::Forms::TextBox());
+			this->phoneOrder = (gcnew System::Windows::Forms::TextBox());
+			this->is_enabledOrder = (gcnew System::Windows::Forms::CheckBox());
+			this->emission_datetimeOrder = (gcnew System::Windows::Forms::TextBox());
+			this->payment_numberOrder = (gcnew System::Windows::Forms::TextBox());
+			this->total_amountOrder = (gcnew System::Windows::Forms::TextBox());
+			this->item_nameOrder = (gcnew System::Windows::Forms::TextBox());
+			this->delivery_datetimeOrder = (gcnew System::Windows::Forms::TextBox());
+			this->referenceOrder = (gcnew System::Windows::Forms::TextBox());
+			this->findOrder = (gcnew System::Windows::Forms::Button());
 			this->addItemOrder = (gcnew System::Windows::Forms::Button());
 			this->printOrder = (gcnew System::Windows::Forms::Button());
 			this->deleteOrder = (gcnew System::Windows::Forms::Button());
@@ -251,6 +303,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->addOrder = (gcnew System::Windows::Forms::Button());
 			this->dataGridOrder = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->avgPanierStats = (gcnew System::Windows::Forms::Button());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
@@ -260,7 +313,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->printAlerteStock = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->printTop10 = (gcnew System::Windows::Forms::Button());
 			this->dataGridStats = (gcnew System::Windows::Forms::DataGridView());
@@ -270,18 +323,8 @@ private: System::Windows::Forms::Button^ printClient;
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->printStock = (gcnew System::Windows::Forms::Button());
-			this->finClient = (gcnew System::Windows::Forms::Button());
-			this->printStaff = (gcnew System::Windows::Forms::Button());
 			this->Tabcontrol->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStock))->BeginInit();
@@ -330,6 +373,17 @@ private: System::Windows::Forms::Button^ printClient;
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Stock";
 			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// printStock
+			// 
+			this->printStock->Location = System::Drawing::Point(19, 171);
+			this->printStock->Margin = System::Windows::Forms::Padding(2);
+			this->printStock->Name = L"printStock";
+			this->printStock->Size = System::Drawing::Size(351, 38);
+			this->printStock->TabIndex = 10;
+			this->printStock->Text = L"Afficher tout";
+			this->printStock->UseVisualStyleBackColor = true;
+			this->printStock->Click += gcnew System::EventHandler(this, &MyForm::printStock_Click);
 			// 
 			// textBox35
 			// 
@@ -396,7 +450,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->deleteStock->Name = L"deleteStock";
 			this->deleteStock->Size = System::Drawing::Size(159, 74);
 			this->deleteStock->TabIndex = 3;
-			this->deleteStock->Text = L"Supprimer du stock";
+			this->deleteStock->Text = L"Supprimer l\'article";
 			this->deleteStock->UseVisualStyleBackColor = true;
 			// 
 			// updateStock
@@ -406,7 +460,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->updateStock->Name = L"updateStock";
 			this->updateStock->Size = System::Drawing::Size(159, 74);
 			this->updateStock->TabIndex = 2;
-			this->updateStock->Text = L"Mise à jour du stock";
+			this->updateStock->Text = L"Modifier l\'article";
 			this->updateStock->UseVisualStyleBackColor = true;
 			// 
 			// addStock
@@ -416,7 +470,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->addStock->Name = L"addStock";
 			this->addStock->Size = System::Drawing::Size(159, 74);
 			this->addStock->TabIndex = 1;
-			this->addStock->Text = L"Ajouter stock";
+			this->addStock->Text = L"Ajouter article";
 			this->addStock->UseVisualStyleBackColor = true;
 			// 
 			// dataGridStock
@@ -433,17 +487,20 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			// tabPage1
 			// 
-			this->tabPage1->Controls->Add(this->finClient);
+			this->tabPage1->Controls->Add(this->complementClient);
+			this->tabPage1->Controls->Add(this->addressCheck);
+			this->tabPage1->Controls->Add(this->date_of_birthClient);
+			this->tabPage1->Controls->Add(this->findClient);
 			this->tabPage1->Controls->Add(this->printClient);
-			this->tabPage1->Controls->Add(this->textBox9);
-			this->tabPage1->Controls->Add(this->textBox8);
-			this->tabPage1->Controls->Add(this->textBox7);
-			this->tabPage1->Controls->Add(this->textBox6);
-			this->tabPage1->Controls->Add(this->textBox5);
-			this->tabPage1->Controls->Add(this->textBox4);
-			this->tabPage1->Controls->Add(this->textBox3);
-			this->tabPage1->Controls->Add(this->textBox2);
-			this->tabPage1->Controls->Add(this->textBox1);
+			this->tabPage1->Controls->Add(this->phoneClient);
+			this->tabPage1->Controls->Add(this->emailClient);
+			this->tabPage1->Controls->Add(this->countryClient);
+			this->tabPage1->Controls->Add(this->numberClient);
+			this->tabPage1->Controls->Add(this->zipcodeClient);
+			this->tabPage1->Controls->Add(this->cityClient);
+			this->tabPage1->Controls->Add(this->street_nameClient);
+			this->tabPage1->Controls->Add(this->first_nameClient);
+			this->tabPage1->Controls->Add(this->last_nameClient);
 			this->tabPage1->Controls->Add(this->updateClient);
 			this->tabPage1->Controls->Add(this->deleteClient);
 			this->tabPage1->Controls->Add(this->addClient);
@@ -458,6 +515,48 @@ private: System::Windows::Forms::Button^ printClient;
 			this->tabPage1->UseVisualStyleBackColor = true;
 			this->tabPage1->Click += gcnew System::EventHandler(this, &MyForm::tabPage1_Click);
 			// 
+			// complementClient
+			// 
+			this->complementClient->Location = System::Drawing::Point(21, 368);
+			this->complementClient->Margin = System::Windows::Forms::Padding(2);
+			this->complementClient->Name = L"complementClient";
+			this->complementClient->Size = System::Drawing::Size(352, 20);
+			this->complementClient->TabIndex = 17;
+			this->complementClient->Text = L"Complément";
+			// 
+			// addressCheck
+			// 
+			this->addressCheck->AutoSize = true;
+			this->addressCheck->Location = System::Drawing::Point(20, 441);
+			this->addressCheck->Name = L"addressCheck";
+			this->addressCheck->Size = System::Drawing::Size(126, 17);
+			this->addressCheck->TabIndex = 16;
+			this->addressCheck->Text = L"Addresse de livraison";
+			this->addressCheck->UseVisualStyleBackColor = true;
+			this->addressCheck->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged_1);
+			// 
+			// date_of_birthClient
+			// 
+			this->date_of_birthClient->HideSelection = false;
+			this->date_of_birthClient->Location = System::Drawing::Point(20, 274);
+			this->date_of_birthClient->Margin = System::Windows::Forms::Padding(2);
+			this->date_of_birthClient->Name = L"date_of_birthClient";
+			this->date_of_birthClient->Size = System::Drawing::Size(352, 20);
+			this->date_of_birthClient->TabIndex = 15;
+			this->date_of_birthClient->Text = L"Date de naissance";
+			this->date_of_birthClient->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
+			// 
+			// findClient
+			// 
+			this->findClient->Location = System::Drawing::Point(211, 93);
+			this->findClient->Margin = System::Windows::Forms::Padding(2);
+			this->findClient->Name = L"findClient";
+			this->findClient->Size = System::Drawing::Size(161, 74);
+			this->findClient->TabIndex = 14;
+			this->findClient->Text = L"Rechercher";
+			this->findClient->UseVisualStyleBackColor = true;
+			this->findClient->Click += gcnew System::EventHandler(this, &MyForm::findClient_Click);
+			// 
 			// printClient
 			// 
 			this->printClient->Location = System::Drawing::Point(19, 174);
@@ -469,87 +568,88 @@ private: System::Windows::Forms::Button^ printClient;
 			this->printClient->UseVisualStyleBackColor = true;
 			this->printClient->Click += gcnew System::EventHandler(this, &MyForm::printClient_Click);
 			// 
-			// textBox9
+			// phoneClient
 			// 
-			this->textBox9->Location = System::Drawing::Point(19, 364);
-			this->textBox9->Margin = System::Windows::Forms::Padding(2);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(353, 20);
-			this->textBox9->TabIndex = 12;
-			this->textBox9->Text = L"Numéro de téléphone";
+			this->phoneClient->Location = System::Drawing::Point(20, 415);
+			this->phoneClient->Margin = System::Windows::Forms::Padding(2);
+			this->phoneClient->Name = L"phoneClient";
+			this->phoneClient->Size = System::Drawing::Size(353, 20);
+			this->phoneClient->TabIndex = 12;
+			this->phoneClient->Text = L"Numéro de téléphone";
 			// 
-			// textBox8
+			// emailClient
 			// 
-			this->textBox8->Location = System::Drawing::Point(19, 341);
-			this->textBox8->Margin = System::Windows::Forms::Padding(2);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(352, 20);
-			this->textBox8->TabIndex = 11;
-			this->textBox8->Text = L"Adresse Mail";
+			this->emailClient->Location = System::Drawing::Point(20, 392);
+			this->emailClient->Margin = System::Windows::Forms::Padding(2);
+			this->emailClient->Name = L"emailClient";
+			this->emailClient->Size = System::Drawing::Size(352, 20);
+			this->emailClient->TabIndex = 11;
+			this->emailClient->Text = L"Adresse Mail";
 			// 
-			// textBox7
+			// countryClient
 			// 
-			this->textBox7->Location = System::Drawing::Point(19, 318);
-			this->textBox7->Margin = System::Windows::Forms::Padding(2);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(352, 20);
-			this->textBox7->TabIndex = 10;
-			this->textBox7->Text = L"Pays";
+			this->countryClient->Location = System::Drawing::Point(20, 344);
+			this->countryClient->Margin = System::Windows::Forms::Padding(2);
+			this->countryClient->Name = L"countryClient";
+			this->countryClient->Size = System::Drawing::Size(352, 20);
+			this->countryClient->TabIndex = 10;
+			this->countryClient->Text = L"Pays";
 			// 
-			// textBox6
+			// numberClient
 			// 
-			this->textBox6->Location = System::Drawing::Point(19, 273);
-			this->textBox6->Margin = System::Windows::Forms::Padding(2);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(67, 20);
-			this->textBox6->TabIndex = 9;
-			this->textBox6->Text = L"Numéro";
+			this->numberClient->Location = System::Drawing::Point(20, 299);
+			this->numberClient->Margin = System::Windows::Forms::Padding(2);
+			this->numberClient->Name = L"numberClient";
+			this->numberClient->Size = System::Drawing::Size(67, 20);
+			this->numberClient->TabIndex = 9;
+			this->numberClient->Text = L"Numéro";
 			// 
-			// textBox5
+			// zipcodeClient
 			// 
-			this->textBox5->Location = System::Drawing::Point(280, 296);
-			this->textBox5->Margin = System::Windows::Forms::Padding(2);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(90, 20);
-			this->textBox5->TabIndex = 8;
-			this->textBox5->Text = L"Code Postal";
+			this->zipcodeClient->Location = System::Drawing::Point(281, 322);
+			this->zipcodeClient->Margin = System::Windows::Forms::Padding(2);
+			this->zipcodeClient->Name = L"zipcodeClient";
+			this->zipcodeClient->Size = System::Drawing::Size(90, 20);
+			this->zipcodeClient->TabIndex = 8;
+			this->zipcodeClient->Text = L"Code Postal";
 			// 
-			// textBox4
+			// cityClient
 			// 
-			this->textBox4->Location = System::Drawing::Point(19, 296);
-			this->textBox4->Margin = System::Windows::Forms::Padding(2);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(258, 20);
-			this->textBox4->TabIndex = 7;
-			this->textBox4->Text = L"Ville";
+			this->cityClient->Location = System::Drawing::Point(20, 322);
+			this->cityClient->Margin = System::Windows::Forms::Padding(2);
+			this->cityClient->Name = L"cityClient";
+			this->cityClient->Size = System::Drawing::Size(258, 20);
+			this->cityClient->TabIndex = 7;
+			this->cityClient->Text = L"Ville";
 			// 
-			// textBox3
+			// street_nameClient
 			// 
-			this->textBox3->Location = System::Drawing::Point(89, 273);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(282, 20);
-			this->textBox3->TabIndex = 6;
-			this->textBox3->Tag = L"";
-			this->textBox3->Text = L"Adresse";
+			this->street_nameClient->Location = System::Drawing::Point(90, 299);
+			this->street_nameClient->Margin = System::Windows::Forms::Padding(2);
+			this->street_nameClient->Name = L"street_nameClient";
+			this->street_nameClient->Size = System::Drawing::Size(282, 20);
+			this->street_nameClient->TabIndex = 6;
+			this->street_nameClient->Tag = L"";
+			this->street_nameClient->Text = L"Adresse";
 			// 
-			// textBox2
+			// first_nameClient
 			// 
-			this->textBox2->Location = System::Drawing::Point(19, 250);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(352, 20);
-			this->textBox2->TabIndex = 5;
-			this->textBox2->Text = L"Prénom";
+			this->first_nameClient->HideSelection = false;
+			this->first_nameClient->Location = System::Drawing::Point(19, 250);
+			this->first_nameClient->Margin = System::Windows::Forms::Padding(2);
+			this->first_nameClient->Name = L"first_nameClient";
+			this->first_nameClient->Size = System::Drawing::Size(352, 20);
+			this->first_nameClient->TabIndex = 5;
+			this->first_nameClient->Text = L"Prénom";
 			// 
-			// textBox1
+			// last_nameClient
 			// 
-			this->textBox1->Location = System::Drawing::Point(19, 228);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(352, 20);
-			this->textBox1->TabIndex = 4;
-			this->textBox1->Text = L"Nom";
+			this->last_nameClient->Location = System::Drawing::Point(19, 228);
+			this->last_nameClient->Margin = System::Windows::Forms::Padding(2);
+			this->last_nameClient->Name = L"last_nameClient";
+			this->last_nameClient->Size = System::Drawing::Size(352, 20);
+			this->last_nameClient->TabIndex = 4;
+			this->last_nameClient->Text = L"Nom";
 			// 
 			// updateClient
 			// 
@@ -571,6 +671,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->deleteClient->TabIndex = 2;
 			this->deleteClient->Text = L"Supprimer client";
 			this->deleteClient->UseVisualStyleBackColor = true;
+			this->deleteClient->Click += gcnew System::EventHandler(this, &MyForm::deleteClient_Click);
 			// 
 			// addClient
 			// 
@@ -581,7 +682,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->addClient->TabIndex = 1;
 			this->addClient->Text = L"Ajouter client";
 			this->addClient->UseVisualStyleBackColor = true;
-			this->addClient->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->addClient->Click += gcnew System::EventHandler(this, &MyForm::addClient_Click);
 			// 
 			// dataGridClient
 			// 
@@ -598,9 +699,9 @@ private: System::Windows::Forms::Button^ printClient;
 			// tabPage2
 			// 
 			this->tabPage2->Controls->Add(this->printStaff);
-			this->tabPage2->Controls->Add(this->textBox23);
+			this->tabPage2->Controls->Add(this->phoneStaff);
 			this->tabPage2->Controls->Add(this->textBox22);
-			this->tabPage2->Controls->Add(this->textBox21);
+			this->tabPage2->Controls->Add(this->emailStaff);
 			this->tabPage2->Controls->Add(this->textBox20);
 			this->tabPage2->Controls->Add(this->textBox19);
 			this->tabPage2->Controls->Add(this->textBox18);
@@ -621,14 +722,25 @@ private: System::Windows::Forms::Button^ printClient;
 			this->tabPage2->Text = L"Personnels";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// textBox23
+			// printStaff
 			// 
-			this->textBox23->Location = System::Drawing::Point(19, 364);
-			this->textBox23->Margin = System::Windows::Forms::Padding(2);
-			this->textBox23->Name = L"textBox23";
-			this->textBox23->Size = System::Drawing::Size(352, 20);
-			this->textBox23->TabIndex = 13;
-			this->textBox23->Text = L"Numéro de téléphone";
+			this->printStaff->Location = System::Drawing::Point(19, 171);
+			this->printStaff->Margin = System::Windows::Forms::Padding(2);
+			this->printStaff->Name = L"printStaff";
+			this->printStaff->Size = System::Drawing::Size(351, 38);
+			this->printStaff->TabIndex = 15;
+			this->printStaff->Text = L"Afficher tout";
+			this->printStaff->UseVisualStyleBackColor = true;
+			this->printStaff->Click += gcnew System::EventHandler(this, &MyForm::printStaff_Click);
+			// 
+			// phoneStaff
+			// 
+			this->phoneStaff->Location = System::Drawing::Point(19, 364);
+			this->phoneStaff->Margin = System::Windows::Forms::Padding(2);
+			this->phoneStaff->Name = L"phoneStaff";
+			this->phoneStaff->Size = System::Drawing::Size(352, 20);
+			this->phoneStaff->TabIndex = 13;
+			this->phoneStaff->Text = L"Numéro de téléphone";
 			// 
 			// textBox22
 			// 
@@ -639,14 +751,14 @@ private: System::Windows::Forms::Button^ printClient;
 			this->textBox22->TabIndex = 12;
 			this->textBox22->Text = L"Pays";
 			// 
-			// textBox21
+			// emailStaff
 			// 
-			this->textBox21->Location = System::Drawing::Point(19, 341);
-			this->textBox21->Margin = System::Windows::Forms::Padding(2);
-			this->textBox21->Name = L"textBox21";
-			this->textBox21->Size = System::Drawing::Size(352, 20);
-			this->textBox21->TabIndex = 11;
-			this->textBox21->Text = L"Adresse Mail";
+			this->emailStaff->Location = System::Drawing::Point(19, 341);
+			this->emailStaff->Margin = System::Windows::Forms::Padding(2);
+			this->emailStaff->Name = L"emailStaff";
+			this->emailStaff->Size = System::Drawing::Size(352, 20);
+			this->emailStaff->TabIndex = 11;
+			this->emailStaff->Text = L"Adresse Mail";
 			// 
 			// textBox20
 			// 
@@ -722,6 +834,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->deleteStaff->TabIndex = 3;
 			this->deleteStaff->Text = L"Supprimer personnel";
 			this->deleteStaff->UseVisualStyleBackColor = true;
+			this->deleteStaff->Click += gcnew System::EventHandler(this, &MyForm::deleteStaff_Click);
 			// 
 			// updateStaff
 			// 
@@ -756,14 +869,16 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			// tabPage4
 			// 
-			this->tabPage4->Controls->Add(this->textBox34);
-			this->tabPage4->Controls->Add(this->textBox33);
-			this->tabPage4->Controls->Add(this->textBox32);
-			this->tabPage4->Controls->Add(this->textBox31);
-			this->tabPage4->Controls->Add(this->textBox30);
-			this->tabPage4->Controls->Add(this->textBox29);
-			this->tabPage4->Controls->Add(this->textBox28);
-			this->tabPage4->Controls->Add(this->deleteItemOrder);
+			this->tabPage4->Controls->Add(this->emailOrder);
+			this->tabPage4->Controls->Add(this->phoneOrder);
+			this->tabPage4->Controls->Add(this->is_enabledOrder);
+			this->tabPage4->Controls->Add(this->emission_datetimeOrder);
+			this->tabPage4->Controls->Add(this->payment_numberOrder);
+			this->tabPage4->Controls->Add(this->total_amountOrder);
+			this->tabPage4->Controls->Add(this->item_nameOrder);
+			this->tabPage4->Controls->Add(this->delivery_datetimeOrder);
+			this->tabPage4->Controls->Add(this->referenceOrder);
+			this->tabPage4->Controls->Add(this->findOrder);
 			this->tabPage4->Controls->Add(this->addItemOrder);
 			this->tabPage4->Controls->Add(this->printOrder);
 			this->tabPage4->Controls->Add(this->deleteOrder);
@@ -780,78 +895,103 @@ private: System::Windows::Forms::Button^ printClient;
 			this->tabPage4->UseVisualStyleBackColor = true;
 			this->tabPage4->Click += gcnew System::EventHandler(this, &MyForm::tabPage4_Click);
 			// 
-			// textBox34
+			// emailOrder
 			// 
-			this->textBox34->Location = System::Drawing::Point(19, 318);
-			this->textBox34->Margin = System::Windows::Forms::Padding(2);
-			this->textBox34->Name = L"textBox34";
-			this->textBox34->Size = System::Drawing::Size(352, 20);
-			this->textBox34->TabIndex = 13;
-			this->textBox34->Text = L"Référence";
+			this->emailOrder->Location = System::Drawing::Point(19, 320);
+			this->emailOrder->Margin = System::Windows::Forms::Padding(2);
+			this->emailOrder->Name = L"emailOrder";
+			this->emailOrder->Size = System::Drawing::Size(352, 20);
+			this->emailOrder->TabIndex = 16;
+			this->emailOrder->Text = L"Email client";
 			// 
-			// textBox33
+			// phoneOrder
 			// 
-			this->textBox33->Location = System::Drawing::Point(19, 340);
-			this->textBox33->Margin = System::Windows::Forms::Padding(2);
-			this->textBox33->Name = L"textBox33";
-			this->textBox33->Size = System::Drawing::Size(352, 20);
-			this->textBox33->TabIndex = 12;
-			this->textBox33->Text = L"Référence";
+			this->phoneOrder->Location = System::Drawing::Point(19, 296);
+			this->phoneOrder->Margin = System::Windows::Forms::Padding(2);
+			this->phoneOrder->Name = L"phoneOrder";
+			this->phoneOrder->Size = System::Drawing::Size(352, 20);
+			this->phoneOrder->TabIndex = 15;
+			this->phoneOrder->Text = L"Téléphone client";
 			// 
-			// textBox32
+			// is_enabledOrder
 			// 
-			this->textBox32->Location = System::Drawing::Point(19, 363);
-			this->textBox32->Margin = System::Windows::Forms::Padding(2);
-			this->textBox32->Name = L"textBox32";
-			this->textBox32->Size = System::Drawing::Size(352, 20);
-			this->textBox32->TabIndex = 11;
-			this->textBox32->Text = L"Référence";
+			this->is_enabledOrder->AutoSize = true;
+			this->is_enabledOrder->Location = System::Drawing::Point(18, 460);
+			this->is_enabledOrder->Name = L"is_enabledOrder";
+			this->is_enabledOrder->Size = System::Drawing::Size(56, 17);
+			this->is_enabledOrder->TabIndex = 14;
+			this->is_enabledOrder->Text = L"Active";
+			this->is_enabledOrder->UseVisualStyleBackColor = true;
 			// 
-			// textBox31
+			// emission_datetimeOrder
 			// 
-			this->textBox31->Location = System::Drawing::Point(19, 386);
-			this->textBox31->Margin = System::Windows::Forms::Padding(2);
-			this->textBox31->Name = L"textBox31";
-			this->textBox31->Size = System::Drawing::Size(352, 20);
-			this->textBox31->TabIndex = 10;
-			this->textBox31->Text = L"Référence";
+			this->emission_datetimeOrder->Location = System::Drawing::Point(18, 368);
+			this->emission_datetimeOrder->Margin = System::Windows::Forms::Padding(2);
+			this->emission_datetimeOrder->Name = L"emission_datetimeOrder";
+			this->emission_datetimeOrder->Size = System::Drawing::Size(352, 20);
+			this->emission_datetimeOrder->TabIndex = 13;
+			this->emission_datetimeOrder->Text = L"Date d\'emission";
+			this->emission_datetimeOrder->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox34_TextChanged);
 			// 
-			// textBox30
+			// payment_numberOrder
 			// 
-			this->textBox30->Location = System::Drawing::Point(19, 409);
-			this->textBox30->Margin = System::Windows::Forms::Padding(2);
-			this->textBox30->Name = L"textBox30";
-			this->textBox30->Size = System::Drawing::Size(352, 20);
-			this->textBox30->TabIndex = 9;
-			this->textBox30->Text = L"Référence";
+			this->payment_numberOrder->Location = System::Drawing::Point(18, 389);
+			this->payment_numberOrder->Margin = System::Windows::Forms::Padding(2);
+			this->payment_numberOrder->Name = L"payment_numberOrder";
+			this->payment_numberOrder->Size = System::Drawing::Size(352, 20);
+			this->payment_numberOrder->TabIndex = 12;
+			this->payment_numberOrder->Text = L"Nombre de paiements";
+			this->payment_numberOrder->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox33_TextChanged);
 			// 
-			// textBox29
+			// total_amountOrder
 			// 
-			this->textBox29->Location = System::Drawing::Point(19, 295);
-			this->textBox29->Margin = System::Windows::Forms::Padding(2);
-			this->textBox29->Name = L"textBox29";
-			this->textBox29->Size = System::Drawing::Size(352, 20);
-			this->textBox29->TabIndex = 8;
-			this->textBox29->Text = L"Référence";
+			this->total_amountOrder->Location = System::Drawing::Point(18, 412);
+			this->total_amountOrder->Margin = System::Windows::Forms::Padding(2);
+			this->total_amountOrder->Name = L"total_amountOrder";
+			this->total_amountOrder->Size = System::Drawing::Size(352, 20);
+			this->total_amountOrder->TabIndex = 11;
+			this->total_amountOrder->Text = L"Montant total";
+			this->total_amountOrder->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox32_TextChanged);
 			// 
-			// textBox28
+			// item_nameOrder
 			// 
-			this->textBox28->Location = System::Drawing::Point(19, 272);
-			this->textBox28->Margin = System::Windows::Forms::Padding(2);
-			this->textBox28->Name = L"textBox28";
-			this->textBox28->Size = System::Drawing::Size(352, 20);
-			this->textBox28->TabIndex = 7;
-			this->textBox28->Text = L"Référence";
+			this->item_nameOrder->Location = System::Drawing::Point(18, 435);
+			this->item_nameOrder->Margin = System::Windows::Forms::Padding(2);
+			this->item_nameOrder->Name = L"item_nameOrder";
+			this->item_nameOrder->Size = System::Drawing::Size(352, 20);
+			this->item_nameOrder->TabIndex = 10;
+			this->item_nameOrder->Text = L"Nom article";
+			this->item_nameOrder->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox31_TextChanged);
 			// 
-			// deleteItemOrder
+			// delivery_datetimeOrder
 			// 
-			this->deleteItemOrder->Location = System::Drawing::Point(211, 171);
-			this->deleteItemOrder->Margin = System::Windows::Forms::Padding(2);
-			this->deleteItemOrder->Name = L"deleteItemOrder";
-			this->deleteItemOrder->Size = System::Drawing::Size(159, 74);
-			this->deleteItemOrder->TabIndex = 6;
-			this->deleteItemOrder->Text = L"Supprimer commande";
-			this->deleteItemOrder->UseVisualStyleBackColor = true;
+			this->delivery_datetimeOrder->Location = System::Drawing::Point(18, 344);
+			this->delivery_datetimeOrder->Margin = System::Windows::Forms::Padding(2);
+			this->delivery_datetimeOrder->Name = L"delivery_datetimeOrder";
+			this->delivery_datetimeOrder->Size = System::Drawing::Size(352, 20);
+			this->delivery_datetimeOrder->TabIndex = 8;
+			this->delivery_datetimeOrder->Text = L"Date de livraison";
+			this->delivery_datetimeOrder->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox29_TextChanged);
+			// 
+			// referenceOrder
+			// 
+			this->referenceOrder->Location = System::Drawing::Point(19, 272);
+			this->referenceOrder->Margin = System::Windows::Forms::Padding(2);
+			this->referenceOrder->Name = L"referenceOrder";
+			this->referenceOrder->Size = System::Drawing::Size(352, 20);
+			this->referenceOrder->TabIndex = 7;
+			this->referenceOrder->Text = L"Référence commande";
+			// 
+			// findOrder
+			// 
+			this->findOrder->Location = System::Drawing::Point(211, 171);
+			this->findOrder->Margin = System::Windows::Forms::Padding(2);
+			this->findOrder->Name = L"findOrder";
+			this->findOrder->Size = System::Drawing::Size(159, 74);
+			this->findOrder->TabIndex = 6;
+			this->findOrder->Text = L"Rechercher commande";
+			this->findOrder->UseVisualStyleBackColor = true;
+			this->findOrder->Click += gcnew System::EventHandler(this, &MyForm::findOrder_Click);
 			// 
 			// addItemOrder
 			// 
@@ -872,6 +1012,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->printOrder->TabIndex = 4;
 			this->printOrder->Text = L"Afficher";
 			this->printOrder->UseVisualStyleBackColor = true;
+			this->printOrder->Click += gcnew System::EventHandler(this, &MyForm::printOrder_Click);
 			// 
 			// deleteOrder
 			// 
@@ -916,6 +1057,7 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->avgPanierStats);
 			this->tabPage5->Controls->Add(this->label11);
 			this->tabPage5->Controls->Add(this->textBox14);
 			this->tabPage5->Controls->Add(this->label10);
@@ -925,7 +1067,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->tabPage5->Controls->Add(this->comboBox2);
 			this->tabPage5->Controls->Add(this->label9);
 			this->tabPage5->Controls->Add(this->comboBox1);
-			this->tabPage5->Controls->Add(this->button10);
+			this->tabPage5->Controls->Add(this->printAlerteStock);
 			this->tabPage5->Controls->Add(this->button9);
 			this->tabPage5->Controls->Add(this->printTop10);
 			this->tabPage5->Controls->Add(this->dataGridStats);
@@ -935,14 +1077,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->tabPage5->Controls->Add(this->textBox12);
 			this->tabPage5->Controls->Add(this->textBox11);
 			this->tabPage5->Controls->Add(this->textBox10);
-			this->tabPage5->Controls->Add(this->button5);
-			this->tabPage5->Controls->Add(this->label8);
-			this->tabPage5->Controls->Add(this->label7);
-			this->tabPage5->Controls->Add(this->label6);
-			this->tabPage5->Controls->Add(this->label5);
 			this->tabPage5->Controls->Add(this->label4);
-			this->tabPage5->Controls->Add(this->label3);
-			this->tabPage5->Controls->Add(this->label2);
 			this->tabPage5->Controls->Add(this->label1);
 			this->tabPage5->Location = System::Drawing::Point(4, 22);
 			this->tabPage5->Margin = System::Windows::Forms::Padding(2);
@@ -953,6 +1088,17 @@ private: System::Windows::Forms::Button^ printClient;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			this->tabPage5->Click += gcnew System::EventHandler(this, &MyForm::tabPage5_Click);
+			// 
+			// avgPanierStats
+			// 
+			this->avgPanierStats->Location = System::Drawing::Point(14, 126);
+			this->avgPanierStats->Margin = System::Windows::Forms::Padding(2);
+			this->avgPanierStats->Name = L"avgPanierStats";
+			this->avgPanierStats->Size = System::Drawing::Size(112, 32);
+			this->avgPanierStats->TabIndex = 28;
+			this->avgPanierStats->Text = L"Calcul panier moyen";
+			this->avgPanierStats->UseVisualStyleBackColor = true;
+			this->avgPanierStats->Click += gcnew System::EventHandler(this, &MyForm::avgPanierStats_Click);
 			// 
 			// label11
 			// 
@@ -989,7 +1135,7 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			// button11
 			// 
-			this->button11->Location = System::Drawing::Point(291, 271);
+			this->button11->Location = System::Drawing::Point(338, 447);
 			this->button11->Margin = System::Windows::Forms::Padding(2);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(112, 32);
@@ -1004,7 +1150,7 @@ private: System::Windows::Forms::Button^ printClient;
 				L"Démarque Inconnue 2%", L"Démarque Inconnue 3%",
 					L"Démarque Inconnue 5%"
 			});
-			this->comboBox4->Location = System::Drawing::Point(251, 243);
+			this->comboBox4->Location = System::Drawing::Point(252, 422);
 			this->comboBox4->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox4->Name = L"comboBox4";
 			this->comboBox4->Size = System::Drawing::Size(199, 21);
@@ -1014,7 +1160,7 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			this->comboBox3->FormattingEnabled = true;
 			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Remise commerciale 3%", L"Remise commerciale 6%" });
-			this->comboBox3->Location = System::Drawing::Point(252, 219);
+			this->comboBox3->Location = System::Drawing::Point(252, 399);
 			this->comboBox3->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(198, 21);
@@ -1027,7 +1173,7 @@ private: System::Windows::Forms::Button^ printClient;
 				L"Marge commerciale 10%", L"Marge commerciale 15%",
 					L"Marge commerciale 20%"
 			});
-			this->comboBox2->Location = System::Drawing::Point(252, 194);
+			this->comboBox2->Location = System::Drawing::Point(252, 375);
 			this->comboBox2->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(199, 21);
@@ -1038,7 +1184,7 @@ private: System::Windows::Forms::Button^ printClient;
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(248, 139);
+			this->label9->Location = System::Drawing::Point(249, 322);
 			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(87, 18);
@@ -1049,25 +1195,26 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"TVA 5%", L"TVA 10%", L"TVA 15%" });
-			this->comboBox1->Location = System::Drawing::Point(251, 170);
+			this->comboBox1->Location = System::Drawing::Point(252, 351);
 			this->comboBox1->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(200, 21);
 			this->comboBox1->TabIndex = 19;
 			// 
-			// button10
+			// printAlerteStock
 			// 
-			this->button10->Location = System::Drawing::Point(291, 93);
-			this->button10->Margin = System::Windows::Forms::Padding(2);
-			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(112, 44);
-			this->button10->TabIndex = 18;
-			this->button10->Text = L"Afficher produit à réapprovisionner";
-			this->button10->UseVisualStyleBackColor = true;
+			this->printAlerteStock->Location = System::Drawing::Point(14, 162);
+			this->printAlerteStock->Margin = System::Windows::Forms::Padding(2);
+			this->printAlerteStock->Name = L"printAlerteStock";
+			this->printAlerteStock->Size = System::Drawing::Size(112, 44);
+			this->printAlerteStock->TabIndex = 18;
+			this->printAlerteStock->Text = L"Afficher produit à réapprovisionner";
+			this->printAlerteStock->UseVisualStyleBackColor = true;
+			this->printAlerteStock->Click += gcnew System::EventHandler(this, &MyForm::printAlerteStock_Click);
 			// 
 			// button9
 			// 
-			this->button9->Location = System::Drawing::Point(291, 52);
+			this->button9->Location = System::Drawing::Point(14, 90);
 			this->button9->Margin = System::Windows::Forms::Padding(2);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(112, 32);
@@ -1077,13 +1224,14 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			// printTop10
 			// 
-			this->printTop10->Location = System::Drawing::Point(291, 15);
+			this->printTop10->Location = System::Drawing::Point(14, 54);
 			this->printTop10->Margin = System::Windows::Forms::Padding(2);
 			this->printTop10->Name = L"printTop10";
 			this->printTop10->Size = System::Drawing::Size(112, 32);
 			this->printTop10->TabIndex = 16;
 			this->printTop10->Text = L"Afficher top 10";
 			this->printTop10->UseVisualStyleBackColor = true;
+			this->printTop10->Click += gcnew System::EventHandler(this, &MyForm::printTop10_Click);
 			// 
 			// dataGridStats
 			// 
@@ -1098,7 +1246,7 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(38, 444);
+			this->button7->Location = System::Drawing::Point(14, 446);
 			this->button7->Margin = System::Windows::Forms::Padding(2);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(112, 32);
@@ -1108,7 +1256,7 @@ private: System::Windows::Forms::Button^ printClient;
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(54, 308);
+			this->button6->Location = System::Drawing::Point(14, 309);
 			this->button6->Margin = System::Windows::Forms::Padding(2);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(112, 32);
@@ -1157,60 +1305,6 @@ private: System::Windows::Forms::Button^ printClient;
 			this->textBox10->TabIndex = 9;
 			this->textBox10->Text = L"Mois";
 			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(38, 170);
-			this->button5->Margin = System::Windows::Forms::Padding(2);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(112, 32);
-			this->button5->TabIndex = 8;
-			this->button5->Text = L"Calcul";
-			this->button5->UseVisualStyleBackColor = true;
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(11, 143);
-			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(46, 13);
-			this->label8->TabIndex = 7;
-			this->label8->Text = L"Résultat";
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(11, 127);
-			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(128, 13);
-			this->label7->TabIndex = 6;
-			this->label7->Text = L"Valeur d\'achat du stock : ";
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(11, 86);
-			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(149, 13);
-			this->label6->TabIndex = 5;
-			this->label6->Text = L"Valeur commerciale du stock :";
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(11, 102);
-			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(43, 13);
-			this->label5->TabIndex = 4;
-			this->label5->Text = L"Résulat";
-			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
@@ -1219,28 +1313,6 @@ private: System::Windows::Forms::Button^ printClient;
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(0, 13);
 			this->label4->TabIndex = 3;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(11, 62);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(46, 13);
-			this->label3->TabIndex = 2;
-			this->label3->Text = L"Résultat";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(11, 46);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(139, 13);
-			this->label2->TabIndex = 1;
-			this->label2->Text = L"Panier moyen après remise :";
 			// 
 			// label1
 			// 
@@ -1254,38 +1326,6 @@ private: System::Windows::Forms::Button^ printClient;
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Statistiques génériques";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
-			// 
-			// printStock
-			// 
-			this->printStock->Location = System::Drawing::Point(19, 171);
-			this->printStock->Margin = System::Windows::Forms::Padding(2);
-			this->printStock->Name = L"printStock";
-			this->printStock->Size = System::Drawing::Size(351, 38);
-			this->printStock->TabIndex = 10;
-			this->printStock->Text = L"Afficher tout";
-			this->printStock->UseVisualStyleBackColor = true;
-			this->printStock->Click += gcnew System::EventHandler(this, &MyForm::printStock_Click);
-			// 
-			// finClient
-			// 
-			this->finClient->Location = System::Drawing::Point(211, 93);
-			this->finClient->Margin = System::Windows::Forms::Padding(2);
-			this->finClient->Name = L"finClient";
-			this->finClient->Size = System::Drawing::Size(161, 74);
-			this->finClient->TabIndex = 14;
-			this->finClient->Text = L"Rechercher";
-			this->finClient->UseVisualStyleBackColor = true;
-			this->finClient->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
-			// 
-			// printStaff
-			// 
-			this->printStaff->Location = System::Drawing::Point(19, 171);
-			this->printStaff->Margin = System::Windows::Forms::Padding(2);
-			this->printStaff->Name = L"printStaff";
-			this->printStaff->Size = System::Drawing::Size(351, 38);
-			this->printStaff->TabIndex = 15;
-			this->printStaff->Text = L"Afficher tout";
-			this->printStaff->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
@@ -1326,8 +1366,25 @@ private: System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvcClient = gcnew NS_Comp_Svc::CLservicesClient();
 	this->oSvcStock = gcnew NS_Comp_Svc::CLservicesStock();
+	this->oSvcStaff = gcnew NS_Comp_Svc::CLservicesStaff();
+	this->oSvcOrder = gcnew NS_Comp_Svc::CLservicesOrder();
+	this->oSvcAddress = gcnew NS_Comp_Svc::CLservicesAddress();
+	this->oSvcStats = gcnew NS_Comp_Svc::CLservicesStats();
 }
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void addClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	System::String^ type;
+	if (this->addressCheck->Checked)
+	{
+		type = "1";
+	}
+	else {
+		type = "0";
+	}
+	this->oSvcClient->ajouterClient("Rsl", type, this->first_nameClient->Text, this->last_nameClient->Text, this->phoneClient->Text, this->emailClient->Text, this->date_of_birthClient->Text, this->numberClient->Text, this->street_nameClient->Text, this->zipcodeClient->Text, this->cityClient->Text, this->countryClient->Text, this->complementClient->Text);
+}
+private: System::Void deleteClient_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->oSvcClient->retirerClient("Rsl", this->phoneClient->Text, this->emailClient->Text);
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
@@ -1353,11 +1410,85 @@ private: System::Void printClient_Click(System::Object^ sender, System::EventArg
 	this->dataGridClient->DataSource = this->oDs;
 	this->dataGridClient->DataMember = "Rsl";
 }
+private: System::Void findClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridClient->Refresh();
+	this->oDs = this->oSvcClient->rechercherClient("Rsl", this->first_nameClient->Text, this->last_nameClient->Text,  this->phoneClient->Text, this->emailClient->Text, this->date_of_birthClient->Text, this->numberClient->Text, this->street_nameClient->Text, this->zipcodeClient->Text, this->cityClient->Text, this->countryClient->Text);
+	this->dataGridClient->DataSource = this->oDs;
+	this->dataGridClient->DataMember = "Rsl";
+}
 private: System::Void printStock_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->dataGridStock->Refresh();
 	this->oDs = this->oSvcStock->selectionnerToutLesStocks("Rsl");
 	this->dataGridStock->DataSource = this->oDs;
 	this->dataGridStock->DataMember = "Rsl";
+}
+private: System::Void deleteStaff_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->oSvcStaff->retirerStaff("Rsl", this->phoneStaff->Text, this->emailStaff->Text);
+}
+private: System::Void printStaff_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridStaff->Refresh();
+	this->oDs = this->oSvcStaff->selectionnerToutLesStaff("Rsl");
+	this->dataGridStaff->DataSource = this->oDs;
+	this->dataGridStaff->DataMember = "Rsl";
+}
+private: System::Void printOrder_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridOrder->Refresh();
+	this->oDs = this->oSvcOrder->selectionnerToutLesCommandes("Rsl");
+	this->dataGridOrder->DataSource = this->oDs;
+	this->dataGridOrder->DataMember = "Rsl";
+}
+private: System::Void findOrder_Click(System::Object^ sender, System::EventArgs^ e) {
+	System::String^ is_enabled;
+	if (this->is_enabledOrder->Checked)
+	{
+		is_enabled = "1";
+	}
+	else {
+		is_enabled = "0";
+	}
+	System::String^ delivery;
+	if (this->delivery_datetimeOrder->Text == "Date de livraison")
+	{
+		delivery = "1900-01-01 12:00:00";
+	}
+	System::String^ emission;
+	if (this->emission_datetimeOrder->Text == "Date d'emission")
+	{
+		emission = "1900-01-01 12:00:00";
+	}
+	System::String^ number;
+	if (this->payment_numberOrder->Text == "Nombre de paiements")
+	{
+		number = "0";
+	}
+	System::String^ amount;
+	if (this->total_amountOrder->Text == "Montant total")
+	{
+		amount = "0";
+	}
+	this->dataGridOrder->Refresh();
+	this->oDs = this->oSvcOrder->rechercherCommande("Rsl", this->referenceOrder->Text, this->phoneOrder->Text, this->emailOrder->Text, delivery, emission, number, amount, this->item_nameOrder->Text, is_enabled);
+	this->dataGridOrder->DataSource = this->oDs;
+	this->dataGridOrder->DataMember = "Rsl";
+}
+private: System::Void printTop10_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridStats->Refresh();
+	this->oDs = this->oSvcStats->calculerTop10("Rsl");
+	this->dataGridStats->DataSource = this->oDs;
+	this->dataGridStats->DataMember = "Rsl";
+}
+private: System::Void avgPanierStats_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridStats->Refresh();
+	this->oDs = this->oSvcStats->calculerPanierMoyen("Rsl");
+	this->dataGridStats->DataSource = this->oDs;
+	this->dataGridStats->DataMember = "Rsl";
+}
+private: System::Void printAlerteStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridStats->Refresh();
+	this->oDs = this->oSvcStats->calculerAlerteStock("Rsl");
+	this->dataGridStats->DataSource = this->oDs;
+	this->dataGridStats->DataMember = "Rsl";
 }
 private: System::Void textBox35_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1365,7 +1496,22 @@ private: System::Void dataGridStock_CellContentClick(System::Object^ sender, Sys
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void printStaff_Click(System::Object^ sender, System::EventArgs^ e) {
+
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void checkBox1_CheckedChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox29_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox33_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox32_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox31_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox30_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox34_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

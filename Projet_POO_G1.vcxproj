@@ -121,9 +121,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CLmapAddress.cpp" />
     <ClCompile Include="CLmapClients.cpp" />
+    <ClCompile Include="CLmapOrder.cpp" />
+    <ClCompile Include="CLmapStaff.cpp" />
+    <ClCompile Include="CLmapStats.cpp" />
     <ClCompile Include="CLmapStock.cpp" />
+    <ClCompile Include="CLservicesAddress.cpp" />
     <ClCompile Include="CLservicesClient.cpp" />
+    <ClCompile Include="CLservicesOrder.cpp" />
+    <ClCompile Include="CLservicesStaff.cpp" />
+    <ClCompile Include="CLservicesStats.cpp" />
     <ClCompile Include="CLservicesStock.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Projet_POO_G1.cpp" />
@@ -131,9 +139,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLcad.h" />
+    <ClInclude Include="CLmapAddress.h" />
     <ClInclude Include="CLmapClients.h" />
+    <ClInclude Include="CLmapOrder.h" />
+    <ClInclude Include="CLmapStaff.h" />
+    <ClInclude Include="CLmapStats.h" />
     <ClInclude Include="CLmapStock.h" />
+    <ClInclude Include="CLservicesAddress.h" />
     <ClInclude Include="CLservicesClient.h" />
+    <ClInclude Include="CLservicesOrder.h" />
+    <ClInclude Include="CLservicesStaff.h" />
+    <ClInclude Include="CLservicesStats.h" />
     <ClInclude Include="CLservicesStock.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
