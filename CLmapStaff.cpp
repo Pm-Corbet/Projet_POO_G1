@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLmapStaff::Select(void)
 }
 System::String^ NS_Comp_Mappage::CLmapStaff::Insert(void)
 {
-	return "INSERT INTO Table_P6 (nom, prenom) VALUES('" + this->last_name + "','" + this->first_name + "');";
+	return "INSERT INTO staff(last_name, first_name, hiring_date, email, phone, is_enabled, id_address, id_staff_supervised) values ('" + this->last_name + "','" + this->first_name + "','" + this->hiring_date + "','" + this->email + "','" + this->phone + "','1', (SELECT id_address FROM address WHERE number = '" + this->number + "' AND complement = '" + this->complement + "' AND id_street_name = (SELECT id_street_name FROM street_name WHERE street_name = '" + this->street_name + "') AND id_city = (SELECT id_city FROM city WHERE city = '" + this->city + "') AND id_zipcode = (SELECT id_zipcode FROM zipcode WHERE zipcode = '" + this->zip_code + "') AND id_country = (SELECT id_country FROM country WHERE country = '" + this->country + "')), 1);";
 }
 System::String^ NS_Comp_Mappage::CLmapStaff::Delete(void)
 {
@@ -50,6 +50,30 @@ void NS_Comp_Mappage::CLmapStaff::setPhone(System::String^ phone)
 void NS_Comp_Mappage::CLmapStaff::setIsEnabled(System::String^ is_enabled)
 {
 	this->is_enabled = is_enabled;
+}
+void NS_Comp_Mappage::CLmapStaff::setNumber(System::String^ number)
+{
+	this->number = number;
+}
+void NS_Comp_Mappage::CLmapStaff::setStreetName(System::String^ street_name)
+{
+	this->street_name = street_name;
+}
+void NS_Comp_Mappage::CLmapStaff::setCity(System::String^ city)
+{
+	this->city = city;
+}
+void NS_Comp_Mappage::CLmapStaff::setZipcode(System::String^ zip_code)
+{
+	this->zip_code = zip_code;
+}
+void NS_Comp_Mappage::CLmapStaff::setCountry(System::String^ country)
+{
+	this->country = country;
+}
+void NS_Comp_Mappage::CLmapStaff::setComplement(System::String^ complement)
+{
+	this->complement = complement;
 }
 System::String^ NS_Comp_Mappage::CLmapStaff::getFirstName(void) { return this->first_name; }
 System::String^ NS_Comp_Mappage::CLmapStaff::getLastName(void) { return this->last_name; }

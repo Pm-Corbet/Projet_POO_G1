@@ -3,7 +3,7 @@
 
 System::String^ NS_Comp_Mappage::CLmapStock::Select(void)
 {
-	return "SELECT * FROM item INNER JOIN type_item ON item.id_type_item = type_item.id_type_item INNER JOIN price ON type_item.id_type_item = price.id_type_item WHERE item.is_enabled = 1";
+	return "SELECT id_item, name, HT_price, TVA_rate FROM item INNER JOIN type_item ON item.id_type_item = type_item.id_type_item INNER JOIN price ON type_item.id_type_item = price.id_type_item WHERE item.is_enabled = 1 and price.is_enabled = 1";
 }
 System::String^ NS_Comp_Mappage::CLmapStock::Insert(void)
 {

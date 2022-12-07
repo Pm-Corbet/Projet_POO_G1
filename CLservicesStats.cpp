@@ -55,5 +55,13 @@ System::Data::DataSet^ NS_Comp_Svc::CLservicesStats::calculerTotalAmountClient(S
 
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::CLservicesStats::calculerChiffreAffaireMois(System::String^ dataTableName, System::String^ month, System::String^ year)
+{
+	System::String^ sql;
+
+	sql = this->oMappStats->resultMonth(month, year);
+
+	return this->oCad->getRows(sql, dataTableName);
+}
 
 

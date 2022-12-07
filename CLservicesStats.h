@@ -17,5 +17,6 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ calculerPrixAchat(System::String^);
 		System::Data::DataSet^ simulerPrix(System::String^ dataTableName, System::String^ tva, System::String^ marge, System::String^ remise, System::String^ demarque);
 		System::Data::DataSet^ calculerTotalAmountClient(System::String^);
+		System::Data::DataSet^ calculerChiffreAffaireMois(System::String^ dataTableName, System::String^ month, System::String^ year);
 	};
 }

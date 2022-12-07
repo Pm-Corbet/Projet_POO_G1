@@ -5,6 +5,7 @@ namespace NS_Comp_Mappage
 	{
 	private:
 		System::String^ sSql;
+
 	public:
 		System::String^ top10(void);
 		System::String^ avgPanier(void);
@@ -12,5 +13,6 @@ namespace NS_Comp_Mappage
 		System::String^ prixAchat(void);
 		System::String^ simulationPrix(System::String^ tva, System::String^ marge, System::String^ remise, System::String^ demarque);
 		System::String^ totalAmountClient(void);
+		System::String^ resultMonth(System::String^ month, System::String^ year);
 	};
 }

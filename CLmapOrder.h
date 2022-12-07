@@ -17,6 +17,7 @@ namespace NS_Comp_Mappage
 		System::String^ email;
 		System::String^ name;
 	public:
+		System::String^ SelectALL(void);
 		System::String^ Select(void);
 		System::String^ Insert(void);
 		System::String^ Delete(void);

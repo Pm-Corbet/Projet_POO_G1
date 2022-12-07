@@ -26,3 +26,7 @@ System::String^ NS_Comp_Mappage::CLmapStats::totalAmountClient()
 {
 	return "SELECT client.id_client, first_name, last_name, SUM(total_amount) as Montant_total_du_client from client inner join orders on client.id_client = orders.id_client GROUP BY client.id_client, first_name, last_name";
 }
+System::String^ NS_Comp_Mappage::CLmapStats::resultMonth(System::String^ month, System::String^ year)
+{
+	return "SELECT SUM(total_amount) FROM orders WHERE MONTH(emission_date) = " + month + " and YEAR(emission_date) = " + year + ";";
+}

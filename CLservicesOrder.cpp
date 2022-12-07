@@ -6,11 +6,17 @@ NS_Comp_Svc::CLservicesOrder::CLservicesOrder(void)
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->oMappOrder = gcnew NS_Comp_Mappage::CLmapOrder;
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservicesOrder::selectionnerToutLesCommandes(System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservicesOrder::selectionnerToutLesCommandes(System::String^ dataTableName, System::String^ checked)
 {
 	System::String^ sql;
-
-	sql = this->oMappOrder->Select();
+	if (checked == "1")
+	{
+		sql = this->oMappOrder->SelectALL();
+	}
+	else
+	{
+		sql = this->oMappOrder->Select();
+	}
 	return this->oCad->getRows(sql, dataTableName);
 }
 System::Data::DataSet^ NS_Comp_Svc::CLservicesOrder::rechercherCommande(System::String^ dataTableName, System::String^ reference, System::String^ phone, System::String^ email, System::String^ delivery_datetime, System::String^ emission_datetime, System::String^ payment_number, System::String^ total_amount, System::String^ name, System::String^ is_enabled)
