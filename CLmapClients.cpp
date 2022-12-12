@@ -9,6 +9,7 @@ System::String^ NS_Comp_Mappage::CLmapClient::Insert(void)
 {
 	return "INSERT INTO client(last_name, first_name, date_of_birth, email, phone, is_enabled) values ('" + this->last_name + "','" + this->first_name + "','" + this->date_of_birth + "','" + this->email + "','" + this->phone + "','1');";
 }
+
 System::String^ NS_Comp_Mappage::CLmapClient::Delete(void)
 {
 	return "UPDATE client SET is_enabled = 0 WHERE phone = '" + this->phone + "' AND email = '" + this->email + "';";

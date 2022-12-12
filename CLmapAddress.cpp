@@ -3,19 +3,19 @@
 
 System::String^ NS_Comp_Mappage::CLmapAddress::insertStreetName(System::String^ street_name)
 {
-	return "INSERT INTO street_name(street_name) values ('" + street_name + "');";
+	return "INSERT INTO street_name (street_name) SELECT '" + street_name + "' WHERE NOT EXISTS ( SELECT street_name from street_name WHERE street_name = '" + street_name + "')";
 }
 System::String^ NS_Comp_Mappage::CLmapAddress::insertCity(System::String^ city)
 {
-	return "INSERT INTO city(city) values ('" + city + "');";
+	return "INSERT INTO city (city) SELECT '" + city + "' WHERE NOT EXISTS ( SELECT city from city WHERE city = '" + city + "')";
 }
 System::String^ NS_Comp_Mappage::CLmapAddress::insertCountry(System::String^ country)
 {
-	return "INSERT INTO country(country) values ('" + country + "');";
+	return "INSERT INTO country (country) SELECT '" + country + "' WHERE NOT EXISTS ( SELECT country from country WHERE country = '" + country + "')";
 }
 System::String^ NS_Comp_Mappage::CLmapAddress::insertZipcode(System::String^ zipcode)
 {
-	return "INSERT INTO zipcode(zipcode) values ('" + zipcode + "');";
+	return "INSERT INTO zipcode (zipcode) SELECT " + zipcode + " WHERE NOT EXISTS ( SELECT zipcode from zipcode WHERE zipcode = " + zipcode + ")";
 }
 System::String^ NS_Comp_Mappage::CLmapAddress::insertAddress(System::String^ number, System::String^ complement, System::String^ street_name, System::String^ city, System::String^ zipcode, System::String^ country)
 {

@@ -195,10 +195,13 @@ private: System::Windows::Forms::TextBox^ first_nameStaff;
 private: System::Windows::Forms::TextBox^ last_nameStaff;
 
 private: System::Windows::Forms::TextBox^ idStocks;
+private: System::Windows::Forms::TextBox^ nameStock;
+private: System::Windows::Forms::TextBox^ HT_priceStock;
 
-	private: System::Windows::Forms::TextBox^ textBox24;
-private: System::Windows::Forms::TextBox^ textBox27;
-private: System::Windows::Forms::TextBox^ textBox26;
+
+
+private: System::Windows::Forms::TextBox^ quantityStock;
+
 private: System::Windows::Forms::TextBox^ emission_datetimeOrder;
 private: System::Windows::Forms::TextBox^ payment_numberOrder;
 private: System::Windows::Forms::TextBox^ total_amountOrder;
@@ -215,8 +218,9 @@ private: System::Windows::Forms::TextBox^ referenceOrder;
 private: System::Windows::Forms::Button^ findOrder;
 
 private: System::Windows::Forms::Button^ addItemOrder;
+private: System::Windows::Forms::TextBox^ TVA_rateStock;
 
-private: System::Windows::Forms::TextBox^ textBox35;
+
 private: System::Windows::Forms::DataGridView^ dataGridClient;
 private: System::Windows::Forms::Button^ printStock;
 private: System::Windows::Forms::Button^ findClient;
@@ -269,11 +273,11 @@ private: System::Windows::Forms::TextBox^ complementStaff;
 			this->Tabcontrol = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->printStock = (gcnew System::Windows::Forms::Button());
-			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox27 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox26 = (gcnew System::Windows::Forms::TextBox());
+			this->TVA_rateStock = (gcnew System::Windows::Forms::TextBox());
+			this->HT_priceStock = (gcnew System::Windows::Forms::TextBox());
+			this->quantityStock = (gcnew System::Windows::Forms::TextBox());
 			this->idStocks = (gcnew System::Windows::Forms::TextBox());
-			this->textBox24 = (gcnew System::Windows::Forms::TextBox());
+			this->nameStock = (gcnew System::Windows::Forms::TextBox());
 			this->findStock = (gcnew System::Windows::Forms::Button());
 			this->deleteStock = (gcnew System::Windows::Forms::Button());
 			this->updateStock = (gcnew System::Windows::Forms::Button());
@@ -383,11 +387,11 @@ private: System::Windows::Forms::TextBox^ complementStaff;
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->printStock);
-			this->tabPage3->Controls->Add(this->textBox35);
-			this->tabPage3->Controls->Add(this->textBox27);
-			this->tabPage3->Controls->Add(this->textBox26);
+			this->tabPage3->Controls->Add(this->TVA_rateStock);
+			this->tabPage3->Controls->Add(this->HT_priceStock);
+			this->tabPage3->Controls->Add(this->quantityStock);
 			this->tabPage3->Controls->Add(this->idStocks);
-			this->tabPage3->Controls->Add(this->textBox24);
+			this->tabPage3->Controls->Add(this->nameStock);
 			this->tabPage3->Controls->Add(this->findStock);
 			this->tabPage3->Controls->Add(this->deleteStock);
 			this->tabPage3->Controls->Add(this->updateStock);
@@ -413,33 +417,33 @@ private: System::Windows::Forms::TextBox^ complementStaff;
 			this->printStock->UseVisualStyleBackColor = true;
 			this->printStock->Click += gcnew System::EventHandler(this, &MyForm::printStock_Click);
 			// 
-			// textBox35
+			// TVA_rateStock
 			// 
-			this->textBox35->Location = System::Drawing::Point(19, 343);
-			this->textBox35->Margin = System::Windows::Forms::Padding(2);
-			this->textBox35->Name = L"textBox35";
-			this->textBox35->Size = System::Drawing::Size(352, 20);
-			this->textBox35->TabIndex = 9;
-			this->textBox35->Text = L"Taux de TVA";
-			this->textBox35->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox35_TextChanged);
+			this->TVA_rateStock->Location = System::Drawing::Point(19, 343);
+			this->TVA_rateStock->Margin = System::Windows::Forms::Padding(2);
+			this->TVA_rateStock->Name = L"TVA_rateStock";
+			this->TVA_rateStock->Size = System::Drawing::Size(352, 20);
+			this->TVA_rateStock->TabIndex = 9;
+			this->TVA_rateStock->Text = L"Taux de TVA";
+			this->TVA_rateStock->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox35_TextChanged);
 			// 
-			// textBox27
+			// HT_priceStock
 			// 
-			this->textBox27->Location = System::Drawing::Point(19, 319);
-			this->textBox27->Margin = System::Windows::Forms::Padding(2);
-			this->textBox27->Name = L"textBox27";
-			this->textBox27->Size = System::Drawing::Size(352, 20);
-			this->textBox27->TabIndex = 8;
-			this->textBox27->Text = L"Prix Hors Taxe";
+			this->HT_priceStock->Location = System::Drawing::Point(19, 319);
+			this->HT_priceStock->Margin = System::Windows::Forms::Padding(2);
+			this->HT_priceStock->Name = L"HT_priceStock";
+			this->HT_priceStock->Size = System::Drawing::Size(352, 20);
+			this->HT_priceStock->TabIndex = 8;
+			this->HT_priceStock->Text = L"Prix Hors Taxe";
 			// 
-			// textBox26
+			// quantityStock
 			// 
-			this->textBox26->Location = System::Drawing::Point(19, 297);
-			this->textBox26->Margin = System::Windows::Forms::Padding(2);
-			this->textBox26->Name = L"textBox26";
-			this->textBox26->Size = System::Drawing::Size(352, 20);
-			this->textBox26->TabIndex = 7;
-			this->textBox26->Text = L"Quantité";
+			this->quantityStock->Location = System::Drawing::Point(19, 297);
+			this->quantityStock->Margin = System::Windows::Forms::Padding(2);
+			this->quantityStock->Name = L"quantityStock";
+			this->quantityStock->Size = System::Drawing::Size(352, 20);
+			this->quantityStock->TabIndex = 7;
+			this->quantityStock->Text = L"Quantité";
 			// 
 			// idStocks
 			// 
@@ -451,14 +455,14 @@ private: System::Windows::Forms::TextBox^ complementStaff;
 			this->idStocks->Text = L"Numéro unique";
 			this->idStocks->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox25_TextChanged);
 			// 
-			// textBox24
+			// nameStock
 			// 
-			this->textBox24->Location = System::Drawing::Point(19, 251);
-			this->textBox24->Margin = System::Windows::Forms::Padding(2);
-			this->textBox24->Name = L"textBox24";
-			this->textBox24->Size = System::Drawing::Size(352, 20);
-			this->textBox24->TabIndex = 5;
-			this->textBox24->Text = L"Nom";
+			this->nameStock->Location = System::Drawing::Point(19, 251);
+			this->nameStock->Margin = System::Windows::Forms::Padding(2);
+			this->nameStock->Name = L"nameStock";
+			this->nameStock->Size = System::Drawing::Size(352, 20);
+			this->nameStock->TabIndex = 5;
+			this->nameStock->Text = L"Nom";
 			// 
 			// findStock
 			// 
@@ -501,6 +505,7 @@ private: System::Windows::Forms::TextBox^ complementStaff;
 			this->addStock->TabIndex = 1;
 			this->addStock->Text = L"Ajouter article";
 			this->addStock->UseVisualStyleBackColor = true;
+			this->addStock->Click += gcnew System::EventHandler(this, &MyForm::addStock_Click);
 			// 
 			// dataGridStock
 			// 
@@ -1435,6 +1440,15 @@ private: System::Void printClient_Click(System::Object^ sender, System::EventArg
 	this->dataGridClient->DataMember = "Rsl";
 }
 private: System::Void findClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	if (this->phoneClient->Text == "Numéro de téléphone")
+	{
+		int phone = 0;
+	}
+	else
+	{
+		System::String^ phone = this->phoneClient->Text;
+	}
 	this->dataGridClient->Refresh();
 	this->oDs = this->oSvcClient->rechercherClient("Rsl", this->first_nameClient->Text, this->last_nameClient->Text,  this->phoneClient->Text, this->emailClient->Text, this->date_of_birthClient->Text, this->numberClient->Text, this->street_nameClient->Text, this->zipcodeClient->Text, this->cityClient->Text, this->countryClient->Text);
 	this->dataGridClient->DataSource = this->oDs;
@@ -1450,6 +1464,9 @@ private: System::Void deleteStock_Click(System::Object^ sender, System::EventArg
 
 	this->oSvcStock->retirerStock("Rsl", this->idStocks->Text);
 }	   
+private: System::Void addStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvcStock->ajouterStock("Rsl", this->nameStock->Text, this->HT_priceStock->Text, this->TVA_rateStock->Text, this->quantityStock->Text);
+} 
 private: System::Void deleteStaff_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	this->oSvcStaff->retirerStaff("Rsl", this->phoneStaff->Text, this->emailStaff->Text);
@@ -1541,7 +1558,6 @@ private: System::Void calculMonth_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void printAlerteStock_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->dataGridStats->Refresh();
-	
 	this->oDs = this->oSvcStats->calculerAlerteStock("Rsl");
 	this->dataGridStats->DataSource = this->oDs;
 	this->dataGridStats->DataMember = "Rsl";

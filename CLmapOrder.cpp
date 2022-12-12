@@ -3,11 +3,11 @@
 
 System::String^ NS_Comp_Mappage::CLmapOrder::SelectALL(void)
 {
-	return "SELECT reference, delivery_datetime, emission_date, payment_number, total_amount, orders.is_enabled as Active, item.id_item, type_item.name, price.HT_price, TVA_rate FROM orders INNER JOIN composed_of on orders.id_order = composed_of.id_order INNER JOIN item on composed_of.id_item = item.id_item INNER JOIN type_item on type_item.id_type_item = item.id_type_item INNER JOIN price on type_item.id_type_item = price.id_type_item WHERE price.is_enabled = 1 AND orders.is_enabled = 1";
+	return "SELECT orders.id_order, reference, delivery_datetime, emission_datetime, payment_number, total_amount, id_client FROM orders INNER JOIN item on orders.id_order = item.id_order INNER JOIN infos_item on infos_item.id_infos_item = item.id_infos_item";
 }
 System::String^ NS_Comp_Mappage::CLmapOrder::Select(void)
 {
-	return "SELECT reference, delivery_datetime, emission_date, payment_number, total_amount, orders.is_enabled as Active FROM orders WHERE orders.is_enabled = 1";
+	return "SELECT reference, delivery_datetime, emission_datetime, payment_number, total_amount, orders.is_enabled as Active FROM orders WHERE orders.is_enabled = 1";
 }
 System::String^ NS_Comp_Mappage::CLmapOrder::Insert(void)
 {

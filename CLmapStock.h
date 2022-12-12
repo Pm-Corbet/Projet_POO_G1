@@ -19,9 +19,14 @@ namespace NS_Comp_Mappage
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
+		System::String^ InsertPrice(void);
+		System::String^ link_cost(void);
+		System::String^ InsertInfosItem(void);
 		System::String^ Delete(void);
 		System::String^ Update(void);
-		void setItemIsEnabled(System::String^);
+		void setName(System::String^);
+		void setHT_price(System::String^);
+		void setTVA_rate(System::String^);
 		void setIdItem(System::String^);
 		System::String^ getTypeItemIsEnabled(void);
 		System::String^ getName(void);

@@ -13,9 +13,6 @@ namespace NS_Comp_Svc
 		CLservicesStock(void);
 		System::Data::DataSet^ selectionnerToutLesStocks(System::String^);
 		void retirerStock(System::String^, System::String^);
-		/*
-		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^);
-		void retirerUnePersonne(System::String^);
-		void modifierUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);*/
+		void ajouterStock(System::String^ dataTableName, System::String^ name, System::String^ HT_price, System::String^ TVA_rate, System::String^ quantity);
 	};
 }
