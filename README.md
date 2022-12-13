@@ -8,6 +8,8 @@ Notre équipe de projet:
   - Yanis Berbar
 
 Configuration requise:
-- Windows (Windows 11 recommandé)
+- Windows
 - Serveur SQL
 - Visual Studio 2022: modules de développement CLI/CLR
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
