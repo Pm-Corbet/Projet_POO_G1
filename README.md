@@ -12,4 +12,4 @@ Configuration requise:
 - Serveur SQL
 - Visual Studio 2022: modules de développement CLI/CLR
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/img.png?raw=true)
+![alt text](https://github.com/Pm-Corbet/Projet_POO_G1/blob/master/img.png?raw=true)
